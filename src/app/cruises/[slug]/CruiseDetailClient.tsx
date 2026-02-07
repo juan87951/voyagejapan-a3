@@ -7,7 +7,6 @@ import type { Cruise, AvailabilityStatus } from '@/types';
 import { Container, Button } from '@/components/ui';
 import { formatDate, formatPriceUSD, cabinAvailabilitySlug } from '@/lib/utils';
 import availabilityData from '@/data/availability.json';
-import { RouteMap } from '@/components/RouteMap';
 import content from '@/content/site.json';
 
 const tabs = ['overview', 'itinerary', 'cabins'] as const;
@@ -212,8 +211,16 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                 })}
               </div>
 
-              {/* Route Map — bottom, large */}
-              <RouteMap itinerary={cruise.itinerary} className="mt-12 max-w-3xl mx-auto" />
+              {/* Route Map */}
+              {cruise.routeMapUrl && (
+                <div className="mt-12 max-w-2xl mx-auto">
+                  <img
+                    src={cruise.routeMapUrl}
+                    alt={`${cruise.title} route map`}
+                    className="w-full rounded-xl border border-gray-200"
+                  />
+                </div>
+              )}
             </motion.div>
           )}
 
