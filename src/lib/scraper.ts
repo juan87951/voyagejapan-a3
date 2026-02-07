@@ -8,18 +8,46 @@ import * as path from 'path';
 
 const AVAILABILITY_FILE = path.join(process.cwd(), 'src', 'data', 'availability.json');
 
-// Mapping of cruise slugs to their plan.asukacruise.co.jp voyage IDs
-const VOYAGE_IDS: Record<string, string> = {
-  'spring-kagoshima-ishigaki': 'A301',
-  'spring-ofunato-aomori': 'A302',
-  'spring-hakodate-fushiki': 'A303',
-  'golden-week-guam': 'A304',
-  'japan-discovery': 'A305',
-  'early-summer-kyushu-amami': 'A306',
-  'summer-suruga-anniversary': 'A307',
-  'summer-hokkaido-kushiro': 'A308',
-  'nichinan-fireworks': 'A309',
-  'summer-hokkaido-rishiri': 'A310',
+// Mapping of cruise slugs to their plan.asukacruise.co.jp page IDs
+const VOYAGE_IDS: Record<string, number> = {
+  'spring-kochi-iwakuni': 97160,
+  'spring-kagoshima-ishigaki': 97163,
+  'spring-weekend-suruga': 97165,
+  'spring-ofunato-aomori': 97166,
+  'spring-hakodate-fushiki': 97167,
+  'golden-week-guam': 97168,
+  'japan-discovery': 98587,
+  'early-summer-kyushu-amami': 98839,
+  'early-summer-weekend-gamagori': 98840,
+  'early-summer-ogasawara': 98841,
+  'early-summer-weekend-kochi': 98844,
+  'early-summer-yokkaichi-yokohama': 98833,
+  'early-summer-weekend-shimoda': 98845,
+  'summer-ogasawara-a': 98842,
+  'summer-hakata-busan': 98846,
+  'summer-weekend-yokkaichi': 98847,
+  'summer-ogasawara-b': 98843,
+  'summer-holiday-suruga': 98848,
+  'summer-hokkaido-kushiro': 98849,
+  'summer-hokkaido-rishiri': 98880,
+  'summer-toba-kobe': 98835,
+  'tateyama-fireworks': 98919,
+  'kanmon-fireworks': 98925,
+  'kumano-fireworks': 98930,
+  'summer-hokkaido-abashiri': 98933,
+  'summer-hokkaido-muroran': 98937,
+  'autumn-hiroshima-hakata': 98838,
+  'autumn-weekend-jeju': 98947,
+  'autumn-seto-wakayama-shodoshima': 98948,
+  'autumn-kochi-kobe': 98938,
+  'autumn-seto-beppu': 98952,
+  'autumn-holiday-tanegashima-kochi': 98953,
+  'autumn-hokkaido-michinoku': 98960,
+  'autumn-suruga-yokohama': 98942,
+  'autumn-tanegashima-nagasaki-kagoshima': 98961,
+  'autumn-holiday-toba': 98962,
+  'autumn-seto-hyuga-matsuyama': 98963,
+  'autumn-hitachinaka-kobe': 98946,
 };
 
 type AvailabilityStatus = 'available' | 'waitlist' | 'sold_out';
@@ -37,8 +65,15 @@ function parseSymbol(symbol: string): AvailabilityStatus {
   return 'available';
 }
 
-async function scrapeVoyage(voyageId: string): Promise<Record<string, AvailabilityStatus> | null> {
-  const url = `https://plan.asukacruise.co.jp/voyage/${voyageId}`;
+const cabinCategories = [
+  'royal-penthouse', 'grand-penthouse', 'captains-suite',
+  'panorama-suite', 'asuka-suite', 'midship-suite', 'junior-suite',
+  'asuka-balcony-a', 'asuka-balcony-b', 'asuka-balcony-c', 'asuka-balcony-d',
+  'solo-balcony',
+];
+
+async function scrapeVoyage(voyageId: number): Promise<Record<string, AvailabilityStatus> | null> {
+  const url = `https://plan.asukacruise.co.jp/asuka3/${voyageId}/`;
 
   try {
     const response = await fetch(url, {
@@ -56,13 +91,6 @@ async function scrapeVoyage(voyageId: string): Promise<Record<string, Availabili
     }
 
     const html = await response.text();
-
-    const cabinCategories = [
-      'royal-penthouse', 'grand-penthouse', 'captains-suite',
-      'panorama-suite', 'asuka-suite', 'midship-suite', 'junior-suite',
-      'asuka-balcony-a', 'asuka-balcony-b', 'asuka-balcony-c', 'asuka-balcony-d',
-      'solo-balcony',
-    ];
 
     const symbols = html.match(/[〇○△×✕]/g);
     if (!symbols || symbols.length < cabinCategories.length) {

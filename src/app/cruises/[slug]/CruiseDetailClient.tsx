@@ -165,7 +165,12 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                 {t.itinerary}
               </h2>
               <div className="space-y-0">
-                {cruise.itinerary.map((stop, i) => (
+                {cruise.itinerary.map((stop, i) => {
+                  const stopDate = new Date(cruise.departureDate);
+                  stopDate.setDate(stopDate.getDate() + stop.day - 1);
+                  const dateStr = stopDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+                  return (
                   <div
                     key={i}
                     className={`flex items-center gap-6 py-5 ${
@@ -174,8 +179,8 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                   >
                     {/* Day marker */}
                     <div className="flex-shrink-0 w-16 text-center">
-                      <div className="text-xs text-gray-500 uppercase">{t.day}</div>
-                      <div className="text-2xl font-display font-semibold text-navy">{stop.day}</div>
+                      <div className="text-xs text-gray-500 uppercase">{t.day} {stop.day}</div>
+                      <div className="text-lg font-display font-semibold text-navy">{dateStr}</div>
                     </div>
 
                     {/* Timeline dot */}
@@ -201,7 +206,8 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                       )}
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </motion.div>
           )}
@@ -241,9 +247,14 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                     {cruise.cabinCategories.map((cabin, i) => {
                       const availKey = cabinAvailabilitySlug(cabin.name);
                       const availability = cruiseAvailability[availKey] || 'available';
+                      const inquiryUrl = `/contact?cruise=${encodeURIComponent(cruise.title)}&cabin=${encodeURIComponent(cabin.name)}`;
 
                       return (
-                        <tr key={i} className="border-b border-gray-100">
+                        <tr
+                          key={i}
+                          className="border-b border-gray-100 hover:bg-cream/50 cursor-pointer transition-colors"
+                          onClick={() => window.location.href = inquiryUrl}
+                        >
                           <td className="py-4 pr-4">
                             <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${
                               cabin.class === 'penthouse' ? 'bg-gold/20 text-gold-dark' :
@@ -254,12 +265,9 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                             </span>
                           </td>
                           <td className="py-4 pr-4">
-                            <Link
-                              href={`/ship/cabins/${cabin.slug}`}
-                              className="font-medium text-navy hover:text-gold transition-colors"
-                            >
+                            <span className="font-medium text-navy">
                               {cabin.name}
-                            </Link>
+                            </span>
                             {cabin.singleOnly && (
                               <span className="ml-2 text-xs text-gray-400">({t.singleOnly})</span>
                             )}

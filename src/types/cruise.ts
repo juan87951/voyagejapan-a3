@@ -27,6 +27,7 @@ export interface CabinCategory {
 export interface Cruise {
   id: string;
   slug: string;
+  asukaCruiseId: number;
   title: string;
   shortDescription: string;
   departureDate: string;

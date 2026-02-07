@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -25,8 +26,25 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function ContactPage() {
+  return (
+    <Suspense>
+      <ContactPageContent />
+    </Suspense>
+  );
+}
+
+function ContactPageContent() {
   const t = content.contact;
+  const searchParams = useSearchParams();
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Pre-fill from query params (from cabin row click)
+  const prefilledCruise = searchParams.get('cruise') || '';
+  const prefilledCabin = searchParams.get('cabin') || '';
+  const matchedCruise = cruises.find(c => c.title === prefilledCruise);
+  const prefilledCabinClass = prefilledCabin.toLowerCase().includes('penthouse') ? 'penthouse'
+    : prefilledCabin.toLowerCase().includes('suite') ? 'suite'
+    : prefilledCabin.toLowerCase().includes('balcony') ? 'balcony' : '';
 
   const {
     register,
@@ -34,6 +52,11 @@ export default function ContactPage() {
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
+    defaultValues: {
+      preferredCruise: matchedCruise?.slug || '',
+      cabinClass: prefilledCabinClass,
+      message: prefilledCabin ? `Interested in: ${prefilledCabin}` : '',
+    },
   });
 
   const onSubmit = async (data: ContactFormData) => {
