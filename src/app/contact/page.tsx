@@ -60,9 +60,15 @@ function ContactPageContent() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log('Form submitted:', data);
+    const res = await fetch('/api/inquiries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) {
+      alert('Something went wrong. Please try again.');
+      return;
+    }
     setIsSubmitted(true);
   };
 
