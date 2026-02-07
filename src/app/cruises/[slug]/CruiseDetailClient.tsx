@@ -164,6 +164,18 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
               <h2 className="font-display text-2xl font-semibold text-navy mb-8">
                 {t.itinerary}
               </h2>
+
+              {/* Route Map */}
+              {cruise.routeMapUrl && (
+                <div className="mb-10 rounded-xl overflow-hidden border border-gray-200 bg-white">
+                  <img
+                    src={cruise.routeMapUrl}
+                    alt={`${cruise.title} route map`}
+                    className="w-full max-w-2xl mx-auto"
+                  />
+                </div>
+              )}
+
               <div className="space-y-0">
                 {cruise.itinerary.map((stop, i) => {
                   const stopDate = new Date(cruise.departureDate);

@@ -42,6 +42,7 @@ export interface Cruise {
   season: 'spring' | 'summer' | 'autumn' | 'winter';
   featured: boolean;
   imageUrl: string;
+  routeMapUrl?: string;
   itinerary: PortOfCall[];
   cabinCategories: CabinCategory[];
 }

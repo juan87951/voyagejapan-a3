@@ -16,6 +16,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23131732/63c8a91e9acd94682c5e1574e4c5fbfb.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/25151739/5cc54924edca7bdcddbfc8fbf102cdf0-1-768x788.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -55,6 +56,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23132252/7560414f559383b1024b2fd7b11ac15d.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/25151646/32292535d4d7b130e3e6167579fb858b-1-768x788.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -96,6 +98,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23133055/fed6386f2b5ed2af1ffa370d23346e62.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/25151539/effa5e270184f815da7c6759db3d8299-1-768x895.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Shimizu', arrival: '08:00', departure: '18:00' },
@@ -132,6 +135,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23133335/ba6a1d715ae2ce0430a6a3d5c0c1e02b.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/25151405/f8f185642f3460d0c89011a741f78656-1-768x788.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -170,6 +174,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/09173253/5a99e3c1784638e129d1244d81773fdb.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/25151312/8881d0a8cf0cd01ccdd80ceafbaf5d2e-1-768x569.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -210,6 +215,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23133636/9078ddd5bb9a0f0411a48f117e998a12.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/25151206/114cab8b5ad0eb08449d82eaf417cd64-1-768x860.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -252,6 +258,7 @@ export const cruises: Cruise[] = [
     season: 'spring',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/10/07114813/top_2375_1200.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/05152724/727d2cbafb6d2a3cb77c11770c447369-768x716.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -307,6 +314,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21133603/9c925b0f16ab7dc85d84e574af7757b3.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25105349/260af21f1b9d7e92f96697f729b8755c-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -347,6 +355,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21142651/cd17b32fc5e3ca6acbe146d51bdfca2a.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25105608/b5f3eebc5119cdb7179e14507d75d484-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Gamagori', arrival: '08:00', departure: '18:00' },
@@ -383,6 +392,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21152614/d99543de5e6e00b5c3be269bf74f8f73.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25110326/a7d42fd8da702f011e310eee97f9a4fe-768x922.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -421,6 +431,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26131923/192be0ea6ab8290c73b23e4933490709.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25110828/49b268d908ff0d0320c53a26d1c6baed-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Kochi', arrival: '08:00', departure: '18:00' },
@@ -457,6 +468,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21155738/87f9f96bae576d9bd8d850ed1d19e1b2.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25104912/76010cb3de05180a2fa18092984d4c3d-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Yokkaichi', arrival: '08:00', departure: '18:00' },
@@ -493,6 +505,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21161005/323a62443dd54579bca1e5b8b231c8ff.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25111019/3c3f33052a71973e9a153f0762492186-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Shimoda', arrival: '08:00', departure: '18:00' },
@@ -529,6 +542,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26135009/9ef76b64bb4a3f883b23b8671bdf2c66.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25110450/cca2a1a6dd5d45978bb6d9c084573847-768x922.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -567,6 +581,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21171354/b38f7e9df7ab3cdb48a11cc5a50752e0.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25111207/16ce81dd8ec1fb091201cce7c6700411-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -605,6 +620,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/11182144/ec6a885733b3e0a6bcf37229870c64d8.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25111631/8b8f34dda46150fdd18e52883b894d03-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Yokkaichi', arrival: '08:00', departure: '18:00' },
@@ -641,6 +657,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26140456/298958002b005d72574741275123b972.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25110649/7841369e316f8aee0d32e72c5d494886-768x922.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -679,6 +696,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21181828/db0378ef3e54444512ab9ea9a14b9304.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25111946/a3776578179026cdc83656f7df5e67b1-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Shimizu', arrival: '08:00', departure: '18:00' },
@@ -715,6 +733,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24134810/c231923bfd2d3e93dcdf7324aa36deb7.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25112458/229c8ffb8b84bdc1f3260692d0ab2835-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -754,6 +773,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24144522/4cd0720886194e9c23cf68b0763874f3.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25113435/bc182fc088127f9f83a7af508dbb78a4-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -795,6 +815,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/11125702/138a416d45e17491952836cd75c05438.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25104516/38bcd4ab0fa8938d84e2bb4c0af7bfcd-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Toba', arrival: '08:00', departure: '18:00' },
@@ -831,6 +852,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/13115430/b154596c530ecd7ca4b2fe419f0d99ae.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25113907/d6e6365105fd11c94a02ae5f241b67a8-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -868,6 +890,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/13121942/5d622161fad962ab07ee862c0f61ac98.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25114159/f165708759198b824aad7cac68e8ec1f-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -906,6 +929,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/28110920/7c3651364f881aeec2b08742c03e597a.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25114718/8851dbb72a592b86f8f4f41b0f8d0fb3-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Kumano', arrival: '14:00', departure: '22:00' },
@@ -942,6 +966,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26151852/21106beef740dba1096f3cdea4d9c785.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25115442/2ae7f8b2d9c844937a9c094a497d723b-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -982,6 +1007,7 @@ export const cruises: Cruise[] = [
     season: 'summer',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24151251/e8ab96cc57757af70eb35885f5d52842.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25115814/189bd6b2c9f8dc07217eade955c29fb6-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1020,6 +1046,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24160324/f65d9b268b036fd12ad1ed708087779e.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25105217/4fefb23cc221844d5f3a0a6d26d6f8a9-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Hiroshima', arrival: '08:00', departure: '18:00' },
@@ -1056,6 +1083,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24161921/43f8fd3d01c271a16800621854d0c8f2.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25120734/8bf4013faf8300fc3ecadaaa83819ecf-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Hakata', departure: '17:00' },
       { day: 2, port: 'Jeju Island', arrival: '08:00', departure: '18:00' },
@@ -1092,6 +1120,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24163456/af6c68db1f0d73db940aac4bd18668e3.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25120928/6168a032d58c7ab72615232e2994ae67-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Hakata', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1130,6 +1159,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26151531/d3c46a718e0a74e097512bbd096af0f8.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25120016/10a06f43da3d7aa1c88d17a370368be8-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Hakata', departure: '17:00' },
       { day: 2, port: 'Kochi', arrival: '08:00', departure: '18:00' },
@@ -1166,6 +1196,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24164606/d1a263dd1e79f4f0a137d14a3dae3e7c.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25121137/3c017d0bc5e19fcd44eb7899b2e75e02-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Beppu', arrival: '08:00', departure: '18:00' },
@@ -1202,6 +1233,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24170736/00c5c19e6ac846c456886585852b25d5.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25121408/eb3fd0fc0fbce5d6ce74ba4cdfe72095-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1239,6 +1271,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: true,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24172620/6d30300ae17d85d9340deb69dcdb36fb.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25121705/ffc3c183f0ed4783e650aee608925945-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1280,6 +1313,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/13155844/e837c9b7081904f426d6e77141798b6d.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25120237/70d62c055aa1ed7a7d9891810de7ceca-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Shimizu', arrival: '08:00', departure: '18:00' },
@@ -1316,6 +1350,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/04160656/7dfc3ef3ef176cd48046e3594df59e6f-1.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25121936/ef87b368bd01f25833cabd95ca9104c2-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1355,6 +1390,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24180047/16952b3475f0c41388bd4bd942ba5eef.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25122240/f32a3dda5d9aff3289ad0dd3978013c1-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Toba', arrival: '08:00', departure: '18:00' },
@@ -1391,6 +1427,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24181223/cb9f5d365042401ce4a0934f41d53115.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25122428/48e6a89d86997fc0dd06d1fe85c6cd1f-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1430,6 +1467,7 @@ export const cruises: Cruise[] = [
     season: 'autumn',
     featured: false,
     imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24182634/efb041f27b4169350c1b4582f6efd08d.jpg',
+    routeMapUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/25120508/b821535223916783a2474e2edba7f319-768x768.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Hitachinaka', arrival: '08:00', departure: '18:00' },
