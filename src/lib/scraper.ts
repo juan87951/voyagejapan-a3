@@ -1,6 +1,7 @@
 /**
  * Reusable availability scraper module
- * Can be imported and called from API routes or scripts
+ * Parses the structured mainData JSON from each voyage page for accurate
+ * availability status based on room quantity.
  */
 
 import * as fs from 'fs';
@@ -8,7 +9,6 @@ import * as path from 'path';
 
 const AVAILABILITY_FILE = path.join(process.cwd(), 'src', 'data', 'availability.json');
 
-// Mapping of cruise slugs to their plan.asukacruise.co.jp page IDs
 const VOYAGE_IDS: Record<string, number> = {
   'spring-kochi-iwakuni': 97160,
   'spring-kagoshima-ishigaki': 97163,
@@ -57,20 +57,57 @@ interface AvailabilityData {
   cruises: Record<string, Record<string, AvailabilityStatus>>;
 }
 
-function parseSymbol(symbol: string): AvailabilityStatus {
-  const trimmed = symbol.trim();
-  if (trimmed === '〇' || trimmed === '○') return 'available';
-  if (trimmed === '△') return 'waitlist';
-  if (trimmed === '×' || trimmed === '✕') return 'sold_out';
+// Map Asuka price keys to our cabin slugs
+// Some categories have variants (MS/M3/MU, AS/AU) — we pick the best availability
+const PRICE_KEY_TO_CABIN: Record<string, string> = {
+  'RP': 'royal-penthouse',
+  'GP': 'grand-penthouse',
+  'CS': 'captains-suite',
+  'PS': 'panorama-suite',
+  'AS': 'asuka-suite',
+  'AU': 'asuka-suite',       // universal variant → same category
+  'MS': 'midship-suite',
+  'M3': 'midship-suite',     // 3-person variant → same category
+  'MU': 'midship-suite',     // universal variant → same category
+  'JS': 'junior-suite',
+  'BA': 'asuka-balcony-a',
+  'BB': 'asuka-balcony-b',
+  'BC': 'asuka-balcony-c',
+  'BD': 'asuka-balcony-d',
+  'B1': 'solo-balcony',
+};
+
+function quantityToStatus(qty: number): AvailabilityStatus {
+  if (qty === 0) return 'sold_out';
+  if (qty === 1) return 'waitlist';
   return 'available';
 }
 
-const cabinCategories = [
-  'royal-penthouse', 'grand-penthouse', 'captains-suite',
-  'panorama-suite', 'asuka-suite', 'midship-suite', 'junior-suite',
-  'asuka-balcony-a', 'asuka-balcony-b', 'asuka-balcony-c', 'asuka-balcony-d',
-  'solo-balcony',
-];
+// Pick the better availability (available > waitlist > sold_out)
+function betterStatus(a: AvailabilityStatus, b: AvailabilityStatus): AvailabilityStatus {
+  const order: Record<AvailabilityStatus, number> = { available: 2, waitlist: 1, sold_out: 0 };
+  return order[a] >= order[b] ? a : b;
+}
+
+interface MainDataPrice {
+  price_key: string;
+  quantity: string;
+  price_double_room: string;
+  price_single_room: string;
+}
+
+interface MainDataRelation {
+  is_main: string;
+  prices: MainDataPrice[];
+}
+
+interface MainDataCourse {
+  relations: MainDataRelation[];
+}
+
+interface MainData {
+  courses: MainDataCourse[];
+}
 
 async function scrapeVoyage(voyageId: number): Promise<Record<string, AvailabilityStatus> | null> {
   const url = `https://plan.asukacruise.co.jp/asuka3/${voyageId}/`;
@@ -92,16 +129,37 @@ async function scrapeVoyage(voyageId: number): Promise<Record<string, Availabili
 
     const html = await response.text();
 
-    const symbols = html.match(/[〇○△×✕]/g);
-    if (!symbols || symbols.length < cabinCategories.length) {
-      console.warn(`  Could not parse symbols for ${voyageId} (found ${symbols?.length || 0})`);
+    // Parse the structured mainData JSON from the page
+    const match = html.match(/var mainData = ({[\s\S]*?});\s/);
+    if (!match) {
+      console.warn(`  Could not find mainData for ${voyageId}`);
       return null;
     }
 
+    const mainData: MainData = JSON.parse(match[1]);
+    const course = mainData.courses?.[0];
+    if (!course) return null;
+
+    // Use the main (non-club) relation
+    const relation = course.relations.find(r => r.is_main === '1');
+    if (!relation) return null;
+
     const result: Record<string, AvailabilityStatus> = {};
-    cabinCategories.forEach((cat, i) => {
-      result[cat] = parseSymbol(symbols[i]);
-    });
+
+    for (const price of relation.prices) {
+      const cabin = PRICE_KEY_TO_CABIN[price.price_key];
+      if (!cabin) continue;
+      const qty = parseInt(price.quantity, 10) || 0;
+      const status = quantityToStatus(qty);
+
+      // For categories with variants (midship-suite, asuka-suite),
+      // pick the best availability across all variants
+      if (result[cabin]) {
+        result[cabin] = betterStatus(result[cabin], status);
+      } else {
+        result[cabin] = status;
+      }
+    }
 
     return result;
   } catch (error) {
@@ -144,7 +202,6 @@ export async function runScraper(verbose = false, writeToFile = false): Promise<
     if (verbose) console.log('No existing data found, starting fresh\n');
   }
 
-  // Scrape in parallel batches of 10 to stay within timeout
   const allEntries = Object.entries(VOYAGE_IDS);
   const BATCH_SIZE = 10;
   let updateCount = 0;
