@@ -49,7 +49,7 @@
   "callToAction": {
     "title": "Begin Your Voyage",
     "subtitle": "Let us help you plan an unforgettable journey through Japan's most captivating destinations",
-    "cta": "Plan Your Voyage"
+    "cta": "Pick Your Voyage"
   },
   "cruises": {
     "pageTitle": "Our Cruises",
@@ -133,7 +133,7 @@
     }
   },
   "contact": {
-    "pageTitle": "Plan Your Voyage",
+    "pageTitle": "Pick Your Voyage",
     "pageSubtitle": "Our travel consultants are ready to help you create your perfect Asuka III experience",
     "form": {
       "title": "Inquiry Form",
