@@ -110,6 +110,25 @@ async function scrapeVoyage(voyageId: number): Promise<Record<string, Availabili
   }
 }
 
+async function scrapeBatch(
+  entries: [string, number][],
+  verbose: boolean
+): Promise<Record<string, Record<string, AvailabilityStatus>>> {
+  const results: Record<string, Record<string, AvailabilityStatus>> = {};
+  const promises = entries.map(async ([slug, voyageId]) => {
+    if (verbose) console.log(`Scraping ${slug} (${voyageId})...`);
+    const result = await scrapeVoyage(voyageId);
+    if (result) {
+      results[slug] = result;
+      if (verbose) console.log(`  OK - ${slug}`);
+    } else {
+      if (verbose) console.log(`  Skipped - ${slug}`);
+    }
+  });
+  await Promise.all(promises);
+  return results;
+}
+
 export async function runScraper(verbose = false, writeToFile = false): Promise<{ updated: boolean; message: string; data?: AvailabilityData }> {
   if (verbose) {
     console.log('Asuka III Availability Scraper');
@@ -125,24 +144,22 @@ export async function runScraper(verbose = false, writeToFile = false): Promise<
     if (verbose) console.log('No existing data found, starting fresh\n');
   }
 
-  let updated = false;
+  // Scrape in parallel batches of 10 to stay within timeout
+  const allEntries = Object.entries(VOYAGE_IDS);
+  const BATCH_SIZE = 10;
   let updateCount = 0;
 
-  for (const [slug, voyageId] of Object.entries(VOYAGE_IDS)) {
-    if (verbose) console.log(`Scraping ${slug} (${voyageId})...`);
-    const result = await scrapeVoyage(voyageId);
-
-    if (result) {
-      existing.cruises[slug] = result;
-      updated = true;
+  for (let i = 0; i < allEntries.length; i += BATCH_SIZE) {
+    const batch = allEntries.slice(i, i + BATCH_SIZE);
+    if (verbose) console.log(`\nBatch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(allEntries.length / BATCH_SIZE)}`);
+    const batchResults = await scrapeBatch(batch, verbose);
+    for (const [slug, data] of Object.entries(batchResults)) {
+      existing.cruises[slug] = data;
       updateCount++;
-      if (verbose) console.log(`  OK - updated`);
-    } else {
-      if (verbose) console.log(`  Skipped - keeping existing data`);
     }
   }
 
-  if (updated) {
+  if (updateCount > 0) {
     existing.lastUpdated = new Date().toISOString();
     if (writeToFile) {
       fs.writeFileSync(AVAILABILITY_FILE, JSON.stringify(existing, null, 2) + '\n');
