@@ -10,7 +10,7 @@
 import { runScraper } from '../src/lib/scraper';
 
 async function main() {
-  await runScraper(true);
+  await runScraper(true, true);
 }
 
 main().catch(console.error);

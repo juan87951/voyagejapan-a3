@@ -82,7 +82,7 @@ async function scrapeVoyage(voyageId: string): Promise<Record<string, Availabili
   }
 }
 
-export async function runScraper(verbose = false): Promise<{ updated: boolean; message: string }> {
+export async function runScraper(verbose = false, writeToFile = false): Promise<{ updated: boolean; message: string; data?: AvailabilityData }> {
   if (verbose) {
     console.log('Asuka III Availability Scraper');
     console.log('=============================\n');
@@ -116,13 +116,15 @@ export async function runScraper(verbose = false): Promise<{ updated: boolean; m
 
   if (updated) {
     existing.lastUpdated = new Date().toISOString();
-    fs.writeFileSync(AVAILABILITY_FILE, JSON.stringify(existing, null, 2) + '\n');
-    const message = `Updated ${updateCount} cruises. Saved to ${AVAILABILITY_FILE}`;
+    if (writeToFile) {
+      fs.writeFileSync(AVAILABILITY_FILE, JSON.stringify(existing, null, 2) + '\n');
+    }
+    const message = `Updated ${updateCount} cruises`;
     if (verbose) console.log(`\n${message}`);
-    return { updated: true, message };
+    return { updated: true, message, data: existing };
   } else {
     const message = 'No updates made (all fetches failed or returned no data)';
     if (verbose) console.log(`\n${message}`);
-    return { updated: false, message };
+    return { updated: false, message, data: existing };
   }
 }

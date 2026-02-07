@@ -23,13 +23,14 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const result = await runScraper(true);
-    
+    const result = await runScraper(true, false);
+
     return NextResponse.json(
       {
         success: true,
         updated: result.updated,
         message: result.message,
+        data: result.data,
         timestamp: new Date().toISOString(),
       },
       { status: 200 }
