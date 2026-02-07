@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:plan.asukacruise.co.jp)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm install:*)",
+      "Bash(npx next build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(curl:*)",
+      "Bash(taskkill:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:www.asukacruise.co.jp)",
+      "Bash(del \"C:\\\\users\\\\michi\\\\voyagejapan-a3\\\\temp_*.jpg\")",
+      "WebFetch(domain:kumarisu-cruise.com)",
+      "WebFetch(domain:www.best1cruise.com)",
+      "WebFetch(domain:www.hankyu-travel.com)",
+      "WebFetch(domain:www.cruisevacation.jp)",
+      "WebFetch(domain:www.bute.co.jp)",
+      "WebFetch(domain:www.cruiseplanet.co.jp)"
+    ]
+  }
+}

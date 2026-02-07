@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "title": "Voyage Japan with Asuka III | Premium Japanese Cruise Experience",
+    "description": "Discover Japan's coastlines aboard Asuka III, Japan's most prestigious cruise ship. Experience world-class hospitality, exquisite cuisine, and unforgettable destinations."
+  },
+  "navigation": {
+    "home": "Home",
+    "cruises": "Cruises",
+    "ship": "The Ship",
+    "contact": "Inquire"
+  },
+  "hero": {
+    "headline": "Discover Japan by Sea",
+    "subheadline": "Experience the extraordinary aboard Asuka III, Japan's most prestigious cruise ship",
+    "cta": "Explore Voyages",
+    "scrollHint": "Scroll to discover"
+  },
+  "brandStory": {
+    "title": "Why Asuka III",
+    "subtitle": "A Legacy of Excellence",
+    "paragraph1": "For over three decades, the Asuka name has symbolized the pinnacle of Japanese hospitality at sea. Asuka III continues this proud tradition, offering an unparalleled voyage experience that seamlessly blends Western luxury with Japanese refinement.",
+    "paragraph2": "Every journey aboard Asuka III is crafted to reveal Japan's hidden treasures—from remote islands to historic ports—while enveloping you in world-class comfort and service.",
+    "learnMore": "Learn More About the Ship"
+  },
+  "featuredCruises": {
+    "title": "Featured Voyages",
+    "subtitle": "Handpicked journeys for discerning travelers",
+    "viewAll": "View All Cruises",
+    "from": "From",
+    "perPerson": "per person",
+    "days": "days",
+    "nights": "nights"
+  },
+  "shipHighlights": {
+    "title": "Asuka III at a Glance",
+    "guests": "Guests",
+    "guestCapacity": "872",
+    "tonnage": "Gross Tonnage",
+    "tonnageValue": "50,142",
+    "crew": "Crew Members",
+    "crewCount": "520",
+    "ratio": "Guest to Crew Ratio",
+    "ratioValue": "1.7:1",
+    "restaurants": "Restaurants",
+    "restaurantCount": "6",
+    "cabins": "Cabin Categories",
+    "cabinCount": "12"
+  },
+  "callToAction": {
+    "title": "Begin Your Voyage",
+    "subtitle": "Let us help you plan an unforgettable journey through Japan's most captivating destinations",
+    "cta": "Plan Your Voyage"
+  },
+  "cruises": {
+    "pageTitle": "Our Cruises",
+    "pageSubtitle": "Explore Japan's diverse coastlines, from the subtropical islands of Okinawa to the rugged beauty of Hokkaido",
+    "days": "days",
+    "nights": "nights",
+    "from": "From",
+    "perPerson": "per person",
+    "viewDetails": "View Details",
+    "filters": {
+      "all": "All Voyages",
+      "spring": "Spring",
+      "summer": "Summer",
+      "featured": "Featured"
+    }
+  },
+  "cruiseDetail": {
+    "overview": "Overview",
+    "itinerary": "Itinerary",
+    "cabins": "Cabins & Pricing",
+    "highlights": "Highlights",
+    "day": "Day",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "atSea": "At Sea",
+    "port": "Port",
+    "selectCabin": "Select Cabin",
+    "inquireNow": "Inquire Now",
+    "priceNote": "Prices shown are per person, based on double occupancy. Port charges and taxes included.",
+    "class": "Class",
+    "category": "Category",
+    "price": "Price",
+    "status": "Status",
+    "contactForPricing": "Contact for pricing",
+    "perPerson": "per person",
+    "from": "From",
+    "available": "Available",
+    "waitlist": "Waitlist",
+    "soldOut": "Sold Out",
+    "singleOnly": "Single occupancy",
+    "exchangeRateNote": "Prices are approximate USD equivalents at ¥130 = $1. Actual prices are in Japanese Yen and subject to exchange rate fluctuations."
+  },
+  "cabinDetail": {
+    "backToShip": "Back to Ship",
+    "size": "Size",
+    "deck": "Deck",
+    "rooms": "Rooms on Board",
+    "maxOccupancy": "Max Occupancy",
+    "guests": "guests",
+    "guest": "guest",
+    "features": "Features",
+    "voyagesTitle": "Available Voyages",
+    "from": "From",
+    "perPerson": "per person",
+    "viewVoyage": "View Voyage",
+    "viewAllCabins": "View All Cabins"
+  },
+  "ship": {
+    "pageTitle": "The Ship",
+    "pageSubtitle": "Asuka III represents the finest in Japanese maritime hospitality",
+    "overview": {
+      "title": "A Masterpiece of Maritime Design",
+      "description": "Asuka III embodies the perfect harmony of Japanese aesthetics and modern luxury. Every detail, from the elegant public spaces to the meticulously appointed staterooms, reflects our commitment to providing an unparalleled cruise experience."
+    },
+    "cabins": {
+      "title": "Accommodations",
+      "subtitle": "Nine distinctive cabin types, each offering exceptional comfort",
+      "suiteClass": "Suite Class",
+      "balconyClass": "Balcony Class",
+      "oceanviewClass": "Oceanview Class",
+      "sqm": "sq m",
+      "features": "Features",
+      "penthouse": "Penthouse",
+      "suite": "Suite",
+      "balcony": "Balcony",
+      "viewDetails": "View Details"
+    },
+    "dining": {
+      "title": "Culinary Excellence",
+      "subtitle": "Six distinctive restaurants showcasing world-class cuisine"
+    }
+  },
+  "contact": {
+    "pageTitle": "Plan Your Voyage",
+    "pageSubtitle": "Our travel consultants are ready to help you create your perfect Asuka III experience",
+    "form": {
+      "title": "Inquiry Form",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneOptional": "(Optional)",
+      "country": "Country of Residence",
+      "countryPlaceholder": "Select your country",
+      "preferredCruise": "Preferred Cruise",
+      "preferredCruisePlaceholder": "Select a cruise (optional)",
+      "cabinClass": "Preferred Cabin Class",
+      "cabinClassPlaceholder": "Select cabin class",
+      "travelDates": "Preferred Travel Dates",
+      "travelDateStart": "From",
+      "travelDateEnd": "To",
+      "guestCount": "Number of Guests",
+      "message": "Additional Message",
+      "messagePlaceholder": "Tell us about your preferences, special requests, or any questions you may have...",
+      "consent": "I agree to receive marketing communications about cruises and special offers",
+      "submit": "Submit Inquiry",
+      "submitting": "Submitting...",
+      "required": "Required",
+      "penthouse": "Penthouse",
+      "suite": "Suite",
+      "balcony": "Balcony"
+    },
+    "success": {
+      "title": "Thank You!",
+      "message": "Your inquiry has been received. Our travel consultants will contact you within 24-48 hours.",
+      "cta": "Return to Home"
+    },
+    "errors": {
+      "name": "Please enter your name",
+      "email": "Please enter a valid email address",
+      "country": "Please select your country",
+      "submit": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Experience the extraordinary aboard Japan's most prestigious cruise ship",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "email": "info@voyagejapan.com",
+    "phone": "+81 3 1234 5678",
+    "copyright": "Voyage Japan. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "backToHome": "Back to Home",
+    "learnMore": "Learn More"
+  }
+}
