@@ -7,6 +7,7 @@ import type { Cruise, AvailabilityStatus } from '@/types';
 import { Container, Button } from '@/components/ui';
 import { formatDate, formatPriceUSD, cabinAvailabilitySlug } from '@/lib/utils';
 import availabilityData from '@/data/availability.json';
+import { RouteMap } from '@/components/RouteMap';
 import content from '@/content/site.json';
 
 const tabs = ['overview', 'itinerary', 'cabins'] as const;
@@ -165,67 +166,54 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                 {t.itinerary}
               </h2>
 
-              <div className="grid md:grid-cols-3 gap-10">
-                {/* Itinerary list — left side */}
-                <div className="md:col-span-2 space-y-0">
-                  {cruise.itinerary.map((stop, i) => {
-                    const stopDate = new Date(cruise.departureDate);
-                    stopDate.setDate(stopDate.getDate() + stop.day - 1);
-                    const dateStr = stopDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+              <div className="space-y-0">
+                {cruise.itinerary.map((stop, i) => {
+                  const stopDate = new Date(cruise.departureDate);
+                  stopDate.setDate(stopDate.getDate() + stop.day - 1);
+                  const dateStr = stopDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
-                    return (
-                    <div
-                      key={i}
-                      className={`flex items-center gap-6 py-5 ${
-                        i < cruise.itinerary.length - 1 ? 'border-b border-gray-100' : ''
-                      }`}
-                    >
-                      {/* Day marker */}
-                      <div className="flex-shrink-0 w-16 text-center">
-                        <div className="text-xs text-gray-500 uppercase">{t.day} {stop.day}</div>
-                        <div className="text-lg font-display font-semibold text-navy">{dateStr}</div>
-                      </div>
-
-                      {/* Timeline dot */}
-                      <div className="flex-shrink-0 relative">
-                        <div className={`w-3 h-3 rounded-full ${stop.isSeaDay ? 'bg-navy/30' : 'bg-gold'}`} />
-                      </div>
-
-                      {/* Port info */}
-                      <div className="flex-1">
-                        <div className="font-medium text-navy">
-                          {stop.port}
-                        </div>
-                        {stop.isSeaDay ? (
-                          <div className="text-sm text-gray-500 italic">
-                            {t.atSea}
-                          </div>
-                        ) : (
-                          <div className="text-sm text-gray-500">
-                            {stop.arrival && `${t.arrival}: ${stop.arrival}`}
-                            {stop.arrival && stop.departure && ' — '}
-                            {stop.departure && `${t.departure}: ${stop.departure}`}
-                          </div>
-                        )}
-                      </div>
+                  return (
+                  <div
+                    key={i}
+                    className={`flex items-center gap-6 py-5 ${
+                      i < cruise.itinerary.length - 1 ? 'border-b border-gray-100' : ''
+                    }`}
+                  >
+                    {/* Day marker */}
+                    <div className="flex-shrink-0 w-16 text-center">
+                      <div className="text-xs text-gray-500 uppercase">{t.day} {stop.day}</div>
+                      <div className="text-lg font-display font-semibold text-navy">{dateStr}</div>
                     </div>
-                    );
-                  })}
-                </div>
 
-                {/* Route Map — right side, sticky */}
-                {cruise.routeMapUrl && (
-                  <div className="md:col-span-1">
-                    <div className="sticky top-32 rounded-xl overflow-hidden border border-gray-200 bg-white">
-                      <img
-                        src={cruise.routeMapUrl}
-                        alt={`${cruise.title} route map`}
-                        className="w-full"
-                      />
+                    {/* Timeline dot */}
+                    <div className="flex-shrink-0 relative">
+                      <div className={`w-3 h-3 rounded-full ${stop.isSeaDay ? 'bg-navy/30' : 'bg-gold'}`} />
+                    </div>
+
+                    {/* Port info */}
+                    <div className="flex-1">
+                      <div className="font-medium text-navy">
+                        {stop.port}
+                      </div>
+                      {stop.isSeaDay ? (
+                        <div className="text-sm text-gray-500 italic">
+                          {t.atSea}
+                        </div>
+                      ) : (
+                        <div className="text-sm text-gray-500">
+                          {stop.arrival && `${t.arrival}: ${stop.arrival}`}
+                          {stop.arrival && stop.departure && ' — '}
+                          {stop.departure && `${t.departure}: ${stop.departure}`}
+                        </div>
+                      )}
                     </div>
                   </div>
-                )}
+                  );
+                })}
               </div>
+
+              {/* Route Map — bottom, large */}
+              <RouteMap itinerary={cruise.itinerary} className="mt-12 max-w-3xl mx-auto" />
             </motion.div>
           )}
 
