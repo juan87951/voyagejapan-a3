@@ -15,7 +15,7 @@ export const cruises: Cruise[] = [
     highlights: ["Kochi Castle and Makino Botanical Garden","Iwakuni Kintai Bridge — five-arched wooden masterpiece","Cherry blossom season along the coast","Fresh bonito (katsuo) in Kochi"],
     season: 'spring',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23131732/63c8a91e9acd94682c5e1574e4c5fbfb.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -54,7 +54,7 @@ export const cruises: Cruise[] = [
     highlights: ["Ibusuki sand bath hot springs","Subtropical nature of Ishigaki Island","Kabira Bay — one of Japan's most beautiful bays","Cherry blossom season in southern Japan"],
     season: 'spring',
     featured: true,
-    imageUrl: '/images/cruises/kagoshima-ishigaki.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23132252/7560414f559383b1024b2fd7b11ac15d.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -95,7 +95,7 @@ export const cruises: Cruise[] = [
     highlights: ["Mt. Fuji views from Suruga Bay","Perfect short cruise getaway","Shizuoka tea country and local cuisine","Spring weather and clear skies"],
     season: 'spring',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23133055/fed6386f2b5ed2af1ffa370d23346e62.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Shimizu', arrival: '08:00', departure: '18:00' },
@@ -131,7 +131,7 @@ export const cruises: Cruise[] = [
     highlights: ["Tohoku cherry blossoms in full bloom","Sanriku coastline — dramatic cliffs and coves","Aomori cultural heritage and Nebuta history","Fresh seafood from northern waters"],
     season: 'spring',
     featured: false,
-    imageUrl: '/images/cruises/ofunato-aomori.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23133335/ba6a1d715ae2ce0430a6a3d5c0c1e02b.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -169,7 +169,7 @@ export const cruises: Cruise[] = [
     highlights: ["Hakodate night view — one of Japan's top 3","Goryokaku cherry blossoms","Tateyama mountain backdrop at Fushiki","Toyama Bay seafood — the \"natural aquarium\""],
     season: 'spring',
     featured: true,
-    imageUrl: '/images/cruises/hakodate-fushiki.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/09173253/5a99e3c1784638e129d1244d81773fdb.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -209,7 +209,7 @@ export const cruises: Cruise[] = [
     highlights: ["International cruise to tropical Guam","Extended relaxation days at sea","Golden Week special onboard events","Snorkeling and beach activities in Guam"],
     season: 'spring',
     featured: false,
-    imageUrl: '/images/cruises/guam.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23133636/9078ddd5bb9a0f0411a48f117e998a12.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -251,7 +251,7 @@ export const cruises: Cruise[] = [
     highlights: ["Full circumnavigation of Japan","Visit 15+ ports across the country","Experience every climate zone of Japan","Future Cruise Credit for members"],
     season: 'spring',
     featured: true,
-    imageUrl: '/images/cruises/japan-discovery.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/10/07114813/top_2375_1200.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -306,7 +306,7 @@ export const cruises: Cruise[] = [
     highlights: ["Beppu — Japan's hot spring capital","Sakurajima volcano views from Kagoshima","Subtropical Amami Oshima nature","Mangrove kayaking and coral reef snorkeling"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/kyushu-amami.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21133603/9c925b0f16ab7dc85d84e574af7757b3.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -346,7 +346,7 @@ export const cruises: Cruise[] = [
     highlights: ["Gamagori onsen — oceanside hot springs","Takeshima Island nature walk","Quick weekend getaway from Kobe","Early summer ocean breezes"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21142651/cd17b32fc5e3ca6acbe146d51bdfca2a.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Gamagori', arrival: '08:00', departure: '18:00' },
@@ -382,7 +382,7 @@ export const cruises: Cruise[] = [
     highlights: ["UNESCO World Heritage Ogasawara Islands","Rare wildlife and pristine coral reefs","Whale and dolphin watching","Departing from Kobe"],
     season: 'summer',
     featured: true,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21152614/d99543de5e6e00b5c3be269bf74f8f73.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -420,7 +420,7 @@ export const cruises: Cruise[] = [
     highlights: ["Kochi Castle — one of 12 original castles","Famous Hirome Market for fresh katsuo","Weekend getaway from Kobe","Early summer coastal scenery"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26131923/192be0ea6ab8290c73b23e4933490709.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Kochi', arrival: '08:00', departure: '18:00' },
@@ -456,7 +456,7 @@ export const cruises: Cruise[] = [
     highlights: ["Ise Bay scenic sailing","Yokkaichi port town exploration","Kobe to Yokohama repositioning","Early summer sea views"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21155738/87f9f96bae576d9bd8d850ed1d19e1b2.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Yokkaichi', arrival: '08:00', departure: '18:00' },
@@ -492,7 +492,7 @@ export const cruises: Cruise[] = [
     highlights: ["Shimoda — where Perry's Black Ships arrived","Beautiful Izu Peninsula coastline","Ryosenji Temple and Perry Road","Weekend beach getaway"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21161005/323a62443dd54579bca1e5b8b231c8ff.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Shimoda', arrival: '08:00', departure: '18:00' },
@@ -528,7 +528,7 @@ export const cruises: Cruise[] = [
     highlights: ["UNESCO World Heritage Ogasawara Islands","Crystal-clear summer waters","Swimming with dolphins and sea turtles","Unique Bonin Island flora and fauna"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26135009/9ef76b64bb4a3f883b23b8671bdf2c66.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -566,7 +566,7 @@ export const cruises: Cruise[] = [
     highlights: ["International cruise to Busan, South Korea","Hakata — gateway to Kyushu cuisine","Busan's Jagalchi fish market and beaches","Duty-free shopping in Busan"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21171354/b38f7e9df7ab3cdb48a11cc5a50752e0.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -604,7 +604,7 @@ export const cruises: Cruise[] = [
     highlights: ["Yokkaichi industrial night views","Ise Bay scenic cruising","Perfect summer weekend getaway","Onboard summer festivals"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/11182144/ec6a885733b3e0a6bcf37229870c64d8.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Yokkaichi', arrival: '08:00', departure: '18:00' },
@@ -640,7 +640,7 @@ export const cruises: Cruise[] = [
     highlights: ["UNESCO World Heritage Ogasawara Islands","Peak summer diving conditions","Whale watching and snorkeling","Pristine Bonin Island beaches"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26140456/298958002b005d72574741275123b972.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -678,7 +678,7 @@ export const cruises: Cruise[] = [
     highlights: ["Mt. Fuji panoramic views","Summer holiday special events","Shimizu port excursions","Short getaway for busy schedules"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/21181828/db0378ef3e54444512ab9ea9a14b9304.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Shimizu', arrival: '08:00', departure: '18:00' },
@@ -714,7 +714,7 @@ export const cruises: Cruise[] = [
     highlights: ["Kushiro Marshland — Japan's largest wetland","Muroran — dramatic cape and night views","Hakodate morning market","Best season to visit Hokkaido"],
     season: 'summer',
     featured: true,
-    imageUrl: '/images/cruises/hokkaido-kushiro.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24134810/c231923bfd2d3e93dcdf7324aa36deb7.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -753,7 +753,7 @@ export const cruises: Cruise[] = [
     highlights: ["Rishiri Island — the \"floating mountain\"","Rishiri kelp and sea urchin","Rumoi sunset coast","Otaru canal town charm"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/hokkaido-rishiri.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24144522/4cd0720886194e9c23cf68b0763874f3.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -794,7 +794,7 @@ export const cruises: Cruise[] = [
     highlights: ["Mikimoto Pearl Island in Toba","Ise-Shima region seafood","Scenic Kobe arrival","Summer sailing through Ise Bay"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/11125702/138a416d45e17491952836cd75c05438.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Toba', arrival: '08:00', departure: '18:00' },
@@ -830,7 +830,7 @@ export const cruises: Cruise[] = [
     highlights: ["Tateyama Bay summer fireworks from the sea","Unique viewing experience from deck","Kobe departure — easy Kansai access","Summer festival atmosphere onboard"],
     season: 'summer',
     featured: true,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/13115430/b154596c530ecd7ca4b2fe419f0d99ae.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -867,7 +867,7 @@ export const cruises: Cruise[] = [
     highlights: ["Kanmon Straits fireworks — one of Japan's top festivals","15,000 fireworks from both Shimonoseki and Kitakyushu","Unique ship-based viewing","Historic Kanmon Straits passage"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/13121942/5d622161fad962ab07ee862c0f61ac98.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -905,7 +905,7 @@ export const cruises: Cruise[] = [
     highlights: ["Kumano Grand Fireworks — legendary annual event","Watch from the ocean with unobstructed views","Kobe to Yokohama repositioning voyage","300+ years of fireworks tradition"],
     season: 'summer',
     featured: true,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/28110920/7c3651364f881aeec2b08742c03e597a.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Kumano', arrival: '14:00', departure: '22:00' },
@@ -941,7 +941,7 @@ export const cruises: Cruise[] = [
     highlights: ["Abashiri — gateway to the Sea of Okhotsk","Wakkanai — Japan's northernmost city","Pristine Hokkaido nature in summer","Northern wildlife and flower fields"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26151852/21106beef740dba1096f3cdea4d9c785.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -981,7 +981,7 @@ export const cruises: Cruise[] = [
     highlights: ["Muroran Cape Chikyu panoramic views","Hakodate legendary night view","Late summer lavender and flower fields","Hokkaido seafood at its peak"],
     season: 'summer',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24151251/e8ab96cc57757af70eb35885f5d52842.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1019,7 +1019,7 @@ export const cruises: Cruise[] = [
     highlights: ["Hiroshima Peace Memorial and Itsukushima Shrine","Hakata — Kyushu's culinary capital","Seto Inland Sea scenic passage","Early autumn comfortable weather"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24160324/f65d9b268b036fd12ad1ed708087779e.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Hiroshima', arrival: '08:00', departure: '18:00' },
@@ -1055,7 +1055,7 @@ export const cruises: Cruise[] = [
     highlights: ["Jeju Island — Korea's tropical paradise","Hallasan mountain and lava tubes","International weekend getaway","Duty-free shopping"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24161921/43f8fd3d01c271a16800621854d0c8f2.jpg',
     itinerary: [
       { day: 1, port: 'Hakata', departure: '17:00' },
       { day: 2, port: 'Jeju Island', arrival: '08:00', departure: '18:00' },
@@ -1091,7 +1091,7 @@ export const cruises: Cruise[] = [
     highlights: ["Wakayama's coastal scenery and kumano shrines","Shodoshima — Japan's olive island","Angel Road tidal sand path","Seto Inland Sea autumn colors"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24163456/af6c68db1f0d73db940aac4bd18668e3.jpg',
     itinerary: [
       { day: 1, port: 'Hakata', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1129,7 +1129,7 @@ export const cruises: Cruise[] = [
     highlights: ["Kochi Castle and Hirome Market","Autumn bonito (modori-katsuo) season","Hakata to Kobe repositioning","Shikoku autumn foliage"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/26151531/d3c46a718e0a74e097512bbd096af0f8.jpg',
     itinerary: [
       { day: 1, port: 'Hakata', departure: '17:00' },
       { day: 2, port: 'Kochi', arrival: '08:00', departure: '18:00' },
@@ -1165,7 +1165,7 @@ export const cruises: Cruise[] = [
     highlights: ["Beppu's 8 famous hot spring areas","Jigoku (Hell) hot spring tour","Seto Inland Sea autumn scenery","Weekend onsen getaway"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24164606/d1a263dd1e79f4f0a137d14a3dae3e7c.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Beppu', arrival: '08:00', departure: '18:00' },
@@ -1201,7 +1201,7 @@ export const cruises: Cruise[] = [
     highlights: ["JAXA Tanegashima Space Center","Kochi autumn festivals","Silver Week holiday cruise","Subtropical Tanegashima beaches"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24170736/00c5c19e6ac846c456886585852b25d5.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1238,7 +1238,7 @@ export const cruises: Cruise[] = [
     highlights: ["Hokkaido autumn foliage at its peak","Tohoku's Michinoku coastline","Multiple port calls across northern Japan","Autumn culinary specialties"],
     season: 'autumn',
     featured: true,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24172620/6d30300ae17d85d9340deb69dcdb36fb.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1279,7 +1279,7 @@ export const cruises: Cruise[] = [
     highlights: ["Mt. Fuji autumn views from Suruga Bay","Shimizu port and Miho Pine Grove","Kobe to Yokohama repositioning","Clear autumn skies for mountain views"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/13155844/e837c9b7081904f426d6e77141798b6d.jpg',
     itinerary: [
       { day: 1, port: 'Kobe', departure: '17:00' },
       { day: 2, port: 'Shimizu', arrival: '08:00', departure: '18:00' },
@@ -1315,7 +1315,7 @@ export const cruises: Cruise[] = [
     highlights: ["JAXA Tanegashima Space Center","Nagasaki — historic international port","Kagoshima and Sakurajima volcano","Autumn in southern Japan"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/04160656/7dfc3ef3ef176cd48046e3594df59e6f-1.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1354,7 +1354,7 @@ export const cruises: Cruise[] = [
     highlights: ["Mikimoto Pearl Island","Ise-Shima region autumn seafood","Toba Aquarium — one of Japan's largest","Autumn holiday weekend escape"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24180047/16952b3475f0c41388bd4bd942ba5eef.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Toba', arrival: '08:00', departure: '18:00' },
@@ -1390,7 +1390,7 @@ export const cruises: Cruise[] = [
     highlights: ["Hyuga — mythological coastline of Miyazaki","Matsuyama Dogo Onsen — Japan's oldest hot spring","Matsuyama Castle and literary heritage","Seto Inland Sea autumn sailing"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24181223/cb9f5d365042401ce4a0934f41d53115.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'At Sea', isSeaDay: true },
@@ -1429,7 +1429,7 @@ export const cruises: Cruise[] = [
     highlights: ["Hitachi Seaside Park — iconic red kochia fields","Autumn's most Instagram-worthy landscape","Yokohama to Kobe repositioning","Late autumn coastal scenery"],
     season: 'autumn',
     featured: false,
-    imageUrl: '/images/cruises/suruga.jpg',
+    imageUrl: 'https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/11/24182634/efb041f27b4169350c1b4582f6efd08d.jpg',
     itinerary: [
       { day: 1, port: 'Yokohama', departure: '17:00' },
       { day: 2, port: 'Hitachinaka', arrival: '08:00', departure: '18:00' },
