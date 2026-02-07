@@ -70,4 +70,7 @@ export interface Restaurant {
   name: string;
   cuisine: string;
   description: string;
+  imageUrl?: string;
+  type: 'restaurant' | 'bar';
+  note?: string;
 }

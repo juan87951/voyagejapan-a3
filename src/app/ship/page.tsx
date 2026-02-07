@@ -148,7 +148,7 @@ export default function ShipPage() {
         </Container>
       </Section>
 
-      {/* Dining */}
+      {/* Restaurants */}
       <Section variant="navy">
         <Container>
           <SectionHeader>
@@ -157,24 +157,81 @@ export default function ShipPage() {
           </SectionHeader>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {restaurants.map((restaurant, i) => (
+            {restaurants.filter(r => r.type === 'restaurant').map((restaurant, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10"
+                className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10"
               >
-                <h3 className="font-display text-xl font-semibold text-gold mb-1">
-                  {restaurant.name}
-                </h3>
-                <p className="text-white/50 text-sm mb-3">
-                  {restaurant.cuisine}
-                </p>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  {restaurant.description}
-                </p>
+                {restaurant.imageUrl && (
+                  <div className="aspect-[3/2] overflow-hidden">
+                    <img
+                      src={restaurant.imageUrl}
+                      alt={restaurant.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <h3 className="font-display text-xl font-semibold text-gold mb-1">
+                    {restaurant.name}
+                  </h3>
+                  <p className="text-white/50 text-sm mb-3">
+                    {restaurant.cuisine}
+                    {restaurant.note && <span className="ml-2 text-gold/60">· {restaurant.note}</span>}
+                  </p>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    {restaurant.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Bars & Lounges */}
+      <Section>
+        <Container>
+          <SectionHeader>
+            <SectionTitle className="text-navy">{t.dining.barsTitle}</SectionTitle>
+            <SectionSubtitle className="text-gray-600">{t.dining.barsSubtitle}</SectionSubtitle>
+          </SectionHeader>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {restaurants.filter(r => r.type === 'bar').map((bar, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+              >
+                <Card variant="bordered" className="h-full">
+                  {bar.imageUrl && (
+                    <div className="aspect-[3/2] overflow-hidden">
+                      <img
+                        src={bar.imageUrl}
+                        alt={bar.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <CardContent>
+                    <h3 className="font-display text-xl font-semibold text-navy mb-1">
+                      {bar.name}
+                    </h3>
+                    <p className="text-gold text-sm font-medium mb-3">
+                      {bar.cuisine}
+                    </p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {bar.description}
+                    </p>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>

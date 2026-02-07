@@ -129,7 +129,9 @@
     },
     "dining": {
       "title": "Culinary Excellence",
-      "subtitle": "Six distinctive restaurants showcasing world-class cuisine"
+      "subtitle": "Six distinctive restaurants showcasing world-class cuisine",
+      "barsTitle": "Bars & Lounges",
+      "barsSubtitle": "Refined spaces for relaxation, conversation, and evening entertainment"
     }
   },
   "contact": {
