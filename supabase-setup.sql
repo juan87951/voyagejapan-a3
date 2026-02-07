@@ -5,6 +5,7 @@ create table inquiries (
   created_at timestamptz default now(),
   name text not null,
   email text not null,
+  passport text not null,
   phone text,
   country text not null,
   preferred_cruise text,

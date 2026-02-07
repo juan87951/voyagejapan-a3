@@ -12,6 +12,7 @@ export async function POST(request: NextRequest) {
       {
         name: body.name,
         email: body.email,
+        passport: body.passport,
         phone: body.phone || null,
         country: body.country,
         preferred_cruise: body.preferredCruise || null,

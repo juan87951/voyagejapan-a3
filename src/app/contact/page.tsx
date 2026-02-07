@@ -14,6 +14,7 @@ import content from '@/content/site.json';
 const contactSchema = z.object({
   name: z.string().min(1),
   email: z.string().email(),
+  passport: z.string().min(1),
   phone: z.string().optional(),
   country: z.string().min(1),
   preferredCruise: z.string().optional(),
@@ -199,21 +200,29 @@ function ContactPageContent() {
                   />
                 </div>
 
-                {/* Phone & Country */}
+                {/* Passport & Phone */}
                 <div className="grid md:grid-cols-2 gap-6">
+                  <Input
+                    label={t.form.passport}
+                    placeholder={t.form.passportPlaceholder}
+                    error={errors.passport ? t.errors.passport : undefined}
+                    {...register('passport')}
+                  />
                   <Input
                     label={`${t.form.phone} ${t.form.phoneOptional}`}
                     placeholder={t.form.phonePlaceholder}
                     {...register('phone')}
                   />
-                  <Select
-                    label={t.form.country}
-                    placeholder={t.form.countryPlaceholder}
-                    options={countries}
-                    error={errors.country ? t.errors.country : undefined}
-                    {...register('country')}
-                  />
                 </div>
+
+                {/* Country */}
+                <Select
+                  label={t.form.country}
+                  placeholder={t.form.countryPlaceholder}
+                  options={countries}
+                  error={errors.country ? t.errors.country : undefined}
+                  {...register('country')}
+                />
 
                 {/* Cruise & Cabin */}
                 <div className="grid md:grid-cols-2 gap-6">

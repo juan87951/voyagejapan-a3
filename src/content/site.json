@@ -146,6 +146,8 @@
       "phone": "Phone Number",
       "phonePlaceholder": "+1 234 567 8900",
       "phoneOptional": "(Optional)",
+      "passport": "Passport Number",
+      "passportPlaceholder": "Enter your passport number",
       "country": "Country of Residence",
       "countryPlaceholder": "Select your country",
       "preferredCruise": "Preferred Cruise",
@@ -174,6 +176,7 @@
     "errors": {
       "name": "Please enter your name",
       "email": "Please enter a valid email address",
+      "passport": "Please enter your passport number",
       "country": "Please select your country",
       "submit": "Something went wrong. Please try again."
     }
