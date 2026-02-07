@@ -7,4 +7,5 @@ export type {
   ShipSpec,
   CabinType,
   Restaurant,
+  ArtworkItem,
 } from './cruise';

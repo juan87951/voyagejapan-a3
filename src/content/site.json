@@ -132,6 +132,13 @@
       "subtitle": "Six distinctive restaurants showcasing world-class cuisine",
       "barsTitle": "Bars & Lounges",
       "barsSubtitle": "Refined spaces for relaxation, conversation, and evening entertainment"
+    },
+    "art": {
+      "title": "A Floating Art Museum",
+      "subtitle": "Asuka III features an extraordinary collection of original works by Japan's most celebrated artists — including two Living National Treasures",
+      "description": "More than a cruise ship, Asuka III is a curated gallery at sea. The collection spans Japanese painting, lacquerwork, calligraphy, photography, and contemporary art — over 130 original works woven into every space of the vessel. As the artworks interact with the ship's wake and changing skies, they transform continuously, offering a living art experience found nowhere else on earth.",
+      "competitionNote": "Asuka III also features 126 selected works from an open art competition themed \"Traveling Japan's Four Seasons,\" chosen from over 2,300 entries and judged by the ship's featured artists.",
+      "viewArtwork": "View Artwork"
     }
   },
   "contact": {

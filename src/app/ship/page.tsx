@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { shipSpecs, cabinTypes, restaurants } from '@/data';
+import { shipSpecs, cabinTypes, restaurants, artCollection } from '@/data';
 import { Container, Section, SectionHeader, SectionTitle, SectionSubtitle, Card, CardContent } from '@/components/ui';
 import content from '@/content/site.json';
 
@@ -145,6 +145,94 @@ export default function ShipPage() {
               </motion.div>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* Art Collection */}
+      <Section variant="cream">
+        <Container>
+          <SectionHeader>
+            <SectionTitle className="text-navy">{t.art.title}</SectionTitle>
+            <SectionSubtitle className="text-gray-600">{t.art.subtitle}</SectionSubtitle>
+          </SectionHeader>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-12 text-lg"
+          >
+            {t.art.description}
+          </motion.p>
+
+          <div className="space-y-16">
+            {artCollection.map((artwork, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
+              >
+                {/* Artwork Image */}
+                <div className="md:w-1/2">
+                  <div className="relative overflow-hidden rounded-xl shadow-lg">
+                    <img
+                      src={artwork.imageUrl}
+                      alt={`${artwork.title} by ${artwork.artist}`}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="md:w-1/2 space-y-4">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={artwork.artistImageUrl}
+                      alt={artwork.artist}
+                      className="w-14 h-14 rounded-full object-cover border-2 border-gold"
+                    />
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-navy">
+                        {artwork.artist}
+                      </h3>
+                      <p className="text-sm text-gold font-medium">{artwork.artistTitle}</p>
+                    </div>
+                  </div>
+
+                  <h4 className="font-display text-2xl font-semibold text-navy italic">
+                    &ldquo;{artwork.title}&rdquo;
+                  </h4>
+
+                  <div className="flex flex-wrap gap-3 text-xs">
+                    <span className="px-3 py-1 bg-navy/10 text-navy rounded-full font-medium">
+                      {artwork.medium}
+                    </span>
+                    <span className="px-3 py-1 bg-gold/20 text-gold-dark rounded-full font-medium">
+                      {artwork.location}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-700 leading-relaxed">
+                    {artwork.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 text-center text-gray-500 text-sm italic max-w-2xl mx-auto"
+          >
+            {t.art.competitionNote}
+          </motion.p>
         </Container>
       </Section>
 

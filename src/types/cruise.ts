@@ -74,3 +74,14 @@ export interface Restaurant {
   type: 'restaurant' | 'bar';
   note?: string;
 }
+
+export interface ArtworkItem {
+  title: string;
+  artist: string;
+  artistTitle: string;
+  medium: string;
+  location: string;
+  description: string;
+  imageUrl: string;
+  artistImageUrl: string;
+}
