@@ -21,7 +21,7 @@ export function formatDate(date: string | Date): string {
 export const EXCHANGE_RATE = 130;
 
 export function formatPriceUSD(jpyPrice: number): string {
-  const usd = Math.round(jpyPrice / EXCHANGE_RATE);
+  const usd = Math.ceil(jpyPrice / EXCHANGE_RATE / 500) * 500;
   return `$${new Intl.NumberFormat('en-US').format(usd)}`;
 }
 
