@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cruises } from '@/data';
 import { Container, Card, CardContent } from '@/components/ui';
 import { formatDate, formatPriceUSD } from '@/lib/utils';
+import availabilityData from '@/data/availability.json';
+import type { AvailabilityStatus } from '@/types';
 import content from '@/content/site.json';
 
 const filters = ['all', 'spring', 'summer'] as const;
@@ -90,8 +92,20 @@ export default function CruisesPage() {
                             style={{ backgroundImage: `url('${cruise.imageUrl}')` }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/20 to-transparent" />
+                          {(() => {
+                            const avail = (availabilityData.cruises as Record<string, Record<string, AvailabilityStatus>>)[cruise.slug] || {};
+                            const total = Object.keys(avail).length;
+                            const booked = Object.values(avail).filter(s => s === 'sold_out' || s === 'waitlist').length;
+                            return total > 0 && booked > total / 2 ? (
+                              <div className="absolute top-4 right-4">
+                                <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                                  Limited Availability
+                                </span>
+                              </div>
+                            ) : null;
+                          })()}
                           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                            <span className="bg-green-400/90 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <span className="bg-green-700/90 text-white text-sm font-semibold px-3 py-1 rounded-full">
                               {cruise.duration.days} {t.days} / {cruise.duration.nights} {t.nights}
                             </span>
                             <span className="text-gold text-sm font-medium">

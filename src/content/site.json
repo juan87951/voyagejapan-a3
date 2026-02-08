@@ -53,7 +53,7 @@
     "cta": "Pick Your Voyage"
   },
   "cruises": {
-    "pageTitle": "Our Cruises",
+    "pageTitle": "Pick Your Voyage",
     "pageSubtitle": "Explore Japan's diverse coastlines, from the subtropical islands of Okinawa to the rugged beauty of Hokkaido",
     "days": "days",
     "nights": "nights",
@@ -143,7 +143,7 @@
     }
   },
   "contact": {
-    "pageTitle": "Pick Your Voyage",
+    "pageTitle": "Inquire Now",
     "pageSubtitle": "Our travel consultants are ready to help you create your perfect Asuka III experience",
     "form": {
       "title": "Inquiry Form",
