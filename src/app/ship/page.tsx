@@ -92,26 +92,17 @@ export default function ShipPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="text-center"
           >
-            <div className="overflow-x-auto">
-              <img
-                src="/images/deck-plan-en.jpg"
-                alt="AsukaIII deck plan"
-                className="w-full h-auto min-w-[600px]"
-              />
-            </div>
-            <div className="text-center mt-8">
-              <a
-                href="https://www.asukacruise.co.jp/asukacruise_wp/wp-content/uploads/2025/11/ASUKA3_Deckplans_20251113.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" className="rounded-full">
-                  {t.deckPlan.viewFullPlan}
-                </Button>
-              </a>
-            </div>
+            <a
+              href="/images/deck-plan-en.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="rounded-full">
+                {t.deckPlan.viewFullPlan}
+              </Button>
+            </a>
           </motion.div>
         </Container>
       </Section>
