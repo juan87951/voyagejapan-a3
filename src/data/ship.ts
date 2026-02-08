@@ -230,6 +230,26 @@ export const restaurants: Restaurant[] = [
 
 export const artCollection: ArtworkItem[] = [
   {
+    title: 'Radiant Light, Radiant Brilliance',
+    artist: 'Kazumi Murose',
+    artistTitle: 'Living National Treasure — Maki-e (gold-dust lacquer)',
+    medium: 'Maki-e and mother-of-pearl inlay',
+    location: 'Asuka Plaza',
+    description: 'A monumental 9-meter lacquer wall installation expressing wishes for brilliance and progress. The upper section uses gold leaf with maki-e and raden; the lower section features night-luminescent shells on polished black lacquer. A masterwork of Japan\'s highest lacquer art tradition.',
+    imageUrl: 'https://a3art.asukacruise.co.jp/images/artworks/kazumi-murose-1.jpg',
+    artistImageUrl: 'https://a3art.asukacruise.co.jp/images/artists/kazumi-murose.jpg',
+  },
+  {
+    title: 'Sea Journey (Kaiyu)',
+    artist: 'Kazumi Murose, Kazuo Yamagishi & 5 master artisans',
+    artistTitle: 'Two Living National Treasures leading young master craftspeople',
+    medium: 'Raden, kinma, maki-e, chinkin (4 lacquer techniques)',
+    location: 'Umihiko',
+    description: 'A collaborative lacquer masterpiece depicting waves transitioning from ocean swells to calm harbor waters. Created by two Living National Treasures and five young masters of the Japan Craft Association, each contributing their regional lacquerware technique.',
+    imageUrl: 'https://a3art.asukacruise.co.jp/images/artworks/kazumi-murose-2.jpg',
+    artistImageUrl: 'https://a3art.asukacruise.co.jp/images/artists/kazuo-yamagishi.jpg',
+  },
+  {
     title: 'Waterfall on Colors',
     artist: 'Hiroshi Senju',
     artistTitle: 'Internationally acclaimed painter, Japan Art Academy member',
@@ -258,26 +278,6 @@ export const artCollection: ArtworkItem[] = [
     description: 'Four large-scale paintings that gently accompany the elegant flow of time within the ship. Known for her signature warm palette, Tamura creates dignified female figures designed to harmonize with the refined atmosphere of the dining room.',
     imageUrl: 'https://a3art.asukacruise.co.jp/images/artworks/noriko-tamura-2.jpg',
     artistImageUrl: 'https://a3art.asukacruise.co.jp/images/artists/noriko-tamura.jpg',
-  },
-  {
-    title: 'Radiant Light, Radiant Brilliance',
-    artist: 'Kazumi Murose',
-    artistTitle: 'Living National Treasure — Maki-e (gold-dust lacquer)',
-    medium: 'Maki-e and mother-of-pearl inlay',
-    location: 'Asuka Plaza',
-    description: 'A monumental 9-meter lacquer wall installation expressing wishes for brilliance and progress. The upper section uses gold leaf with maki-e and raden; the lower section features night-luminescent shells on polished black lacquer. A masterwork of Japan\'s highest lacquer art tradition.',
-    imageUrl: 'https://a3art.asukacruise.co.jp/images/artworks/kazumi-murose-1.jpg',
-    artistImageUrl: 'https://a3art.asukacruise.co.jp/images/artists/kazumi-murose.jpg',
-  },
-  {
-    title: 'Sea Journey (Kaiyu)',
-    artist: 'Kazumi Murose, Kazuo Yamagishi & 5 master artisans',
-    artistTitle: 'Two Living National Treasures leading young master craftspeople',
-    medium: 'Raden, kinma, maki-e, chinkin (4 lacquer techniques)',
-    location: 'Umihiko',
-    description: 'A collaborative lacquer masterpiece depicting waves transitioning from ocean swells to calm harbor waters. Created by two Living National Treasures and five young masters of the Japan Craft Association, each contributing their regional lacquerware technique.',
-    imageUrl: 'https://a3art.asukacruise.co.jp/images/artworks/kazumi-murose-2.jpg',
-    artistImageUrl: 'https://a3art.asukacruise.co.jp/images/artists/kazuo-yamagishi.jpg',
   },
   {
     title: 'Asuka Sky',
