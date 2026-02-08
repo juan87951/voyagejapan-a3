@@ -23,7 +23,7 @@ export function Footer() {
             <div className="md:col-span-1">
               <Link href="/" className="inline-block">
                 <span className="font-display text-2xl font-semibold text-white">
-                  Voyage Japan
+                  Voyage Japan with Asuka III
                 </span>
               </Link>
               <p className="mt-4 text-white/70 max-w-sm">

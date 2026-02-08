@@ -55,7 +55,7 @@ export function Header() {
               'font-display text-2xl font-semibold transition-colors duration-300',
               isScrolled || isMobileMenuOpen ? 'text-navy' : 'text-white'
             )}>
-              Voyage Japan
+              Voyage Japan with Asuka III
             </span>
           </Link>
 
