@@ -31,6 +31,7 @@ export function Header() {
     { href: '/', label: nav.home },
     { href: '/cruises', label: nav.cruises },
     { href: '/ship', label: nav.ship },
+    { href: '/art', label: nav.art },
     { href: '/contact', label: nav.contact }
   ];
 
