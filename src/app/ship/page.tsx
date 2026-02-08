@@ -92,17 +92,15 @@ export default function ShipPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="max-w-5xl mx-auto"
           >
-            <a
-              href="/images/deck-plan-en.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" className="rounded-full">
-                {t.deckPlan.viewFullPlan}
-              </Button>
-            </a>
+            <div className="overflow-x-auto">
+              <img
+                src="/images/deck-plan-en-full.jpg"
+                alt="AsukaIII deck plan"
+                className="w-full h-auto min-w-[800px]"
+              />
+            </div>
           </motion.div>
         </Container>
       </Section>
