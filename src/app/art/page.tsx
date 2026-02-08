@@ -58,7 +58,7 @@ export default function ArtPage() {
       <Section>
         <Container>
           <SectionHeader>
-            <SectionTitle className="text-navy">Featured Artists & Works</SectionTitle>
+            <SectionTitle className="text-navy">Featured Artists & Masterpieces</SectionTitle>
             <SectionSubtitle className="text-gray-600">
               Original masterworks by Japan&apos;s most celebrated contemporary artists
             </SectionSubtitle>
