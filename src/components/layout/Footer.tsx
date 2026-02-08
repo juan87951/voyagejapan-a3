@@ -10,6 +10,7 @@ export function Footer() {
   const quickLinks = [
     { href: '/cruises', label: nav.cruises },
     { href: '/ship', label: nav.ship },
+    { href: '/art', label: nav.art },
     { href: '/contact', label: nav.contact }
   ];
 
