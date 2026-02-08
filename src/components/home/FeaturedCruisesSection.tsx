@@ -50,7 +50,7 @@ export function FeaturedCruisesSection() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
-                        <span className="inline-block bg-gold/90 text-navy text-xs font-semibold px-3 py-1 rounded-full">
+                        <span className="inline-block bg-green-400/90 text-white text-xs font-bold px-3 py-1 rounded-full">
                           {cruise.duration.days} {t.days} / {cruise.duration.nights} {t.nights}
                         </span>
                       </div>

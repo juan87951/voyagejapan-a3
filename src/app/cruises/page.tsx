@@ -98,7 +98,7 @@ export default function CruisesPage() {
                             )}
                           </div>
                           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                            <span className="text-white text-sm font-medium">
+                            <span className="text-green-300 text-sm font-semibold">
                               {cruise.duration.days} {t.days} / {cruise.duration.nights} {t.nights}
                             </span>
                             <span className="text-gold text-sm font-medium">
