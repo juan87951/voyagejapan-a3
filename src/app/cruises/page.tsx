@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cruises } from '@/data';
 import { Container, Card, CardContent } from '@/components/ui';
 import { formatDate, formatPriceUSD } from '@/lib/utils';
-import availabilityData from '@/data/availability.json';
+import { useAvailability } from '@/hooks/useAvailability';
 import type { AvailabilityStatus } from '@/types';
 import content from '@/content/site.json';
 
@@ -15,6 +15,7 @@ const filters = ['all', 'spring', 'summer'] as const;
 export default function CruisesPage() {
   const t = content.cruises;
   const [activeFilter, setActiveFilter] = useState<string>('all');
+  const availabilityData = useAvailability();
 
   const filteredCruises = activeFilter === 'all'
     ? cruises
@@ -60,6 +61,12 @@ export default function CruisesPage() {
               </button>
             ))}
           </div>
+
+          {availabilityData.lastUpdated && (
+            <p className="text-right text-xs text-gray-400 mb-4">
+              Availability updated: {new Date(availabilityData.lastUpdated).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })}
+            </p>
+          )}
 
           {/* Cruise Grid */}
           <AnimatePresence mode="wait">

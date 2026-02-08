@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import type { Cruise, AvailabilityStatus } from '@/types';
 import { Container, Button } from '@/components/ui';
 import { formatDate, formatPriceUSD, cabinAvailabilitySlug } from '@/lib/utils';
-import availabilityData from '@/data/availability.json';
+import { useAvailability } from '@/hooks/useAvailability';
 import content from '@/content/site.json';
 
 const tabs = ['overview', 'itinerary', 'cabins'] as const;
@@ -26,6 +26,7 @@ function AvailabilityBadge({ status }: { status: AvailabilityStatus }) {
 export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
   const t = content.cruiseDetail;
   const [activeTab, setActiveTab] = useState<string>('overview');
+  const availabilityData = useAvailability();
 
   // Get availability for this cruise
   const cruiseAvailability = (availabilityData.cruises as Record<string, Record<string, AvailabilityStatus>>)[cruise.slug] || {};

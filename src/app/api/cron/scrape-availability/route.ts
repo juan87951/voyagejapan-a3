@@ -6,6 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { put } from '@vercel/blob';
 import { runScraper } from '@/lib/scraper';
 
 // Allow up to 60 seconds for scraping all voyages (Hobby plan max)
@@ -34,6 +35,15 @@ export async function GET(request: NextRequest) {
 
   try {
     const result = await runScraper(true, false);
+
+    // Persist to Vercel Blob so the data survives ephemeral serverless filesystems
+    if (result.updated && result.data) {
+      await put('availability.json', JSON.stringify(result.data), {
+        access: 'public',
+        addRandomSuffix: false,
+        contentType: 'application/json',
+      });
+    }
 
     return NextResponse.json({
       success: true,
