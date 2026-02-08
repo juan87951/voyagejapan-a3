@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Voyage Japan with Asuka III | Premium Japanese Cruise Experience",
-  description: "Discover Japan's coastlines aboard Asuka III, Japan's most prestigious cruise ship. Experience world-class hospitality, exquisite cuisine, and unforgettable destinations.",
+  title: "Voyage Japan with AsukaIII | Premium Japanese Cruise Experience",
+  description: "Discover Japan's coastlines aboard AsukaIII, Japan's most prestigious cruise ship. Experience world-class hospitality, exquisite cuisine, and unforgettable destinations.",
 };
 
 export default function RootLayout({

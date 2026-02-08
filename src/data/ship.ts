@@ -187,7 +187,7 @@ export const restaurants: Restaurant[] = [
   {
     name: 'Mariner\'s Club',
     cuisine: 'Main Bar',
-    description: 'The refined main bar of Asuka III. Enjoy live piano performances while watching the ocean sunset through panoramic windows, accompanied by an exceptional selection of wines and spirits.',
+    description: 'The refined main bar of AsukaIII. Enjoy live piano performances while watching the ocean sunset through panoramic windows, accompanied by an exceptional selection of wines and spirits.',
     imageUrl: 'https://www.asukacruise.co.jp/asukacruise_wp/wp-content/themes/asuka/img/asuka3/marinersclub_720_480.jpg',
     type: 'bar',
   },
@@ -300,7 +300,7 @@ export const artCollection: ArtworkItem[] = [
     artistImageUrl: 'https://a3art.asukacruise.co.jp/images/artists/sohey-iwata.jpg',
   },
   {
-    title: 'Asuka III (Ship Calligraphy)',
+    title: 'AsukaIII (Ship Calligraphy)',
     artist: 'Shoko Kanazawa',
     artistTitle: 'Calligrapher, exhibited at Ise Jingu, Todai-ji, the Vatican & worldwide',
     medium: 'Large-scale calligraphy on Japanese washi paper',

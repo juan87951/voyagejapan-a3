@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Voyage Japan with Asuka III | Premium Japanese Cruise Experience",
-    "description": "Discover Japan's coastlines aboard Asuka III, Japan's most prestigious cruise ship. Experience world-class hospitality, exquisite cuisine, and unforgettable destinations."
+    "title": "Voyage Japan with AsukaIII | Premium Japanese Cruise Experience",
+    "description": "Discover Japan's coastlines aboard AsukaIII, Japan's most prestigious cruise ship. Experience world-class hospitality, exquisite cuisine, and unforgettable destinations."
   },
   "navigation": {
     "home": "Home",
@@ -12,15 +12,15 @@
   },
   "hero": {
     "headline": "Discover Japan by Sea",
-    "subheadline": "Experience the extraordinary aboard Asuka III, Japan's most prestigious cruise ship",
+    "subheadline": "Experience the extraordinary aboard AsukaIII, Japan's most prestigious cruise ship",
     "cta": "Explore Voyages",
     "scrollHint": "Scroll to discover"
   },
   "brandStory": {
-    "title": "Why Asuka III",
+    "title": "Why AsukaIII",
     "subtitle": "A Legacy of Excellence",
-    "paragraph1": "For over three decades, the Asuka name has symbolized the pinnacle of Japanese hospitality at sea. Asuka III continues this proud tradition, offering an unparalleled voyage experience that seamlessly blends Western luxury with Japanese refinement.",
-    "paragraph2": "Every journey aboard Asuka III is crafted to reveal Japan's hidden treasures—from remote islands to historic ports—while enveloping you in world-class comfort and service.",
+    "paragraph1": "For over three decades, the Asuka name has symbolized the pinnacle of Japanese hospitality at sea. AsukaIII continues this proud tradition, offering an unparalleled voyage experience that seamlessly blends Western luxury with Japanese refinement.",
+    "paragraph2": "Every journey aboard AsukaIII is crafted to reveal Japan's hidden treasures—from remote islands to historic ports—while enveloping you in world-class comfort and service.",
     "learnMore": "Learn More About the Ship"
   },
   "featuredCruises": {
@@ -33,7 +33,7 @@
     "nights": "nights"
   },
   "shipHighlights": {
-    "title": "Asuka III at a Glance",
+    "title": "AsukaIII at a Glance",
     "guests": "Guests",
     "guestCapacity": "872",
     "tonnage": "Gross Tonnage",
@@ -110,10 +110,10 @@
   },
   "ship": {
     "pageTitle": "The Ship",
-    "pageSubtitle": "Asuka III represents the finest in Japanese maritime hospitality",
+    "pageSubtitle": "AsukaIII represents the finest in Japanese maritime hospitality",
     "overview": {
       "title": "A Masterpiece of Maritime Design",
-      "description": "Asuka III embodies the perfect harmony of Japanese aesthetics and modern luxury. Every detail, from the elegant public spaces to the meticulously appointed staterooms, reflects our commitment to providing an unparalleled cruise experience."
+      "description": "AsukaIII embodies the perfect harmony of Japanese aesthetics and modern luxury. Every detail, from the elegant public spaces to the meticulously appointed staterooms, reflects our commitment to providing an unparalleled cruise experience."
     },
     "cabins": {
       "title": "Accommodations",
@@ -136,15 +136,15 @@
     },
     "art": {
       "title": "A Floating Art Museum",
-      "subtitle": "Asuka III features an extraordinary collection of original works by Japan's most celebrated artists — including two Living National Treasures",
-      "description": "More than a cruise ship, Asuka III is a curated gallery at sea. The collection spans Japanese painting, lacquerwork, calligraphy, photography, and more — over 130 original works woven into every space of the vessel. As the artworks interact with the ship's wake and changing skies, they transform continuously, offering a living art experience found nowhere else on earth.",
-      "competitionNote": "Asuka III also features 126 selected works from an open art competition themed \"Traveling Japan's Four Seasons,\" chosen from over 2,300 entries and judged by the ship's featured artists.",
+      "subtitle": "AsukaIII features an extraordinary collection of original works by Japan's most celebrated artists — including two Living National Treasures",
+      "description": "More than a cruise ship, AsukaIII is a curated gallery at sea. The collection spans Japanese painting, lacquerwork, calligraphy, photography, and more — over 130 original works woven into every space of the vessel. As the artworks interact with the ship's wake and changing skies, they transform continuously, offering a living art experience found nowhere else on earth.",
+      "competitionNote": "AsukaIII also features 126 selected works from an open art competition themed \"Traveling Japan's Four Seasons,\" chosen from over 2,300 entries and judged by the ship's featured artists.",
       "viewArtwork": "View Artwork"
     }
   },
   "contact": {
     "pageTitle": "Inquire Now",
-    "pageSubtitle": "Our travel consultants are ready to help you create your perfect Asuka III experience",
+    "pageSubtitle": "Our travel consultants are ready to help you create your perfect AsukaIII experience",
     "form": {
       "title": "Inquiry Form",
       "name": "Full Name",

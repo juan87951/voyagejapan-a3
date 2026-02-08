@@ -29,7 +29,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-gold tracking-[0.3em] uppercase text-sm font-medium mb-6"
         >
-          Asuka III
+          AsukaIII
         </motion.p>
 
         <motion.h1

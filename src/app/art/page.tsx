@@ -161,7 +161,7 @@ export default function ArtPage() {
               Experience Art at Sea
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
-              Step aboard Asuka III and immerse yourself in one of the finest floating art collections in the world.
+              Step aboard AsukaIII and immerse yourself in one of the finest floating art collections in the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/cruises">
