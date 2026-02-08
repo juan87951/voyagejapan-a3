@@ -306,10 +306,6 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                 </table>
               </div>
 
-              <p className="mt-6 text-xs text-gray-400 italic">
-                {t.exchangeRateNote}
-              </p>
-
               {availabilityData.lastUpdated && (
                 <p className="mt-2 text-xs text-gray-400">
                   Last updated: {new Date(availabilityData.lastUpdated).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })}

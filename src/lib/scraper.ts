@@ -92,8 +92,6 @@ function betterStatus(a: AvailabilityStatus, b: AvailabilityStatus): Availabilit
 interface MainDataPrice {
   price_key: string;
   quantity: string;
-  price_double_room: string;
-  price_single_room: string;
 }
 
 interface MainDataRelation {
@@ -189,8 +187,8 @@ async function scrapeBatch(
 
 export async function runScraper(verbose = false, writeToFile = false): Promise<{ updated: boolean; message: string; data?: AvailabilityData }> {
   if (verbose) {
-    console.log('Asuka III Availability Scraper');
-    console.log('=============================\n');
+    console.log('AsukaIII Availability Scraper');
+    console.log('============================\n');
   }
 
   let existing: AvailabilityData;

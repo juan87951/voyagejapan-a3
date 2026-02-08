@@ -115,6 +115,11 @@
       "title": "A Masterpiece of Maritime Design",
       "description": "AsukaIII embodies the perfect harmony of Japanese aesthetics and modern luxury. Every detail, from the elegant public spaces to the meticulously appointed staterooms, reflects our commitment to providing an unparalleled cruise experience."
     },
+    "deckPlan": {
+      "title": "Deck Plan",
+      "subtitle": "Explore the layout of AsukaIII across her eleven passenger decks",
+      "viewFullPlan": "View Full Deck Plan (PDF)"
+    },
     "cabins": {
       "title": "Accommodations",
       "subtitle": "Nine distinctive cabin types, each offering exceptional comfort",

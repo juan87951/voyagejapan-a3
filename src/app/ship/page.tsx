@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { shipSpecs, cabinTypes, restaurants } from '@/data';
-import { Container, Section, SectionHeader, SectionTitle, SectionSubtitle, Card, CardContent } from '@/components/ui';
+import { Container, Section, SectionHeader, SectionTitle, SectionSubtitle, Card, CardContent, Button } from '@/components/ui';
 import content from '@/content/site.json';
 
 export default function ShipPage() {
@@ -79,8 +79,45 @@ export default function ShipPage() {
         </Container>
       </Section>
 
-      {/* Cabins */}
+      {/* Deck Plan */}
       <Section>
+        <Container>
+          <SectionHeader>
+            <SectionTitle className="text-navy">{t.deckPlan.title}</SectionTitle>
+            <SectionSubtitle className="text-gray-600">{t.deckPlan.subtitle}</SectionSubtitle>
+          </SectionHeader>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="overflow-x-auto">
+              <img
+                src="https://www.asukacruise.co.jp/asukacruise_wp/wp-content/themes/asuka/img/asuka3/img_boat.png"
+                alt="AsukaIII ship profile"
+                className="w-full h-auto min-w-[600px]"
+              />
+            </div>
+            <div className="text-center mt-8">
+              <a
+                href="https://www.asukacruise.co.jp/asukacruise_wp/wp-content/uploads/2025/11/ASUKA3_Deckplans_20251113.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="rounded-full">
+                  {t.deckPlan.viewFullPlan}
+                </Button>
+              </a>
+            </div>
+          </motion.div>
+        </Container>
+      </Section>
+
+      {/* Cabins */}
+      <Section variant="cream">
         <Container>
           <SectionHeader>
             <SectionTitle className="text-navy">{t.cabins.title}</SectionTitle>
