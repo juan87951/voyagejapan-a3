@@ -310,6 +310,12 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
                 {t.exchangeRateNote}
               </p>
 
+              {availabilityData.lastUpdated && (
+                <p className="mt-2 text-xs text-gray-400">
+                  Last updated: {new Date(availabilityData.lastUpdated).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })}
+                </p>
+              )}
+
               <div className="mt-8 text-center">
                 <Link href="/contact">
                   <Button variant="primary" className="rounded-full">
