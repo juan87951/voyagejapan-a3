@@ -5,11 +5,14 @@ import { motion } from 'framer-motion';
 import { getFeaturedCruises } from '@/data';
 import { Section, Container, SectionHeader, SectionTitle, SectionSubtitle, Card, CardContent, Button } from '@/components/ui';
 import { formatDate, formatPriceUSD } from '@/lib/utils';
+import { useAvailability } from '@/hooks/useAvailability';
+import type { AvailabilityStatus } from '@/types';
 import content from '@/content/site.json';
 
 export function FeaturedCruisesSection() {
   const t = content.featuredCruises;
   const featured = getFeaturedCruises();
+  const availabilityData = useAvailability();
 
   return (
     <Section>
@@ -49,6 +52,18 @@ export function FeaturedCruisesSection() {
                         style={{ backgroundImage: `url('${cruise.imageUrl}')` }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+                      {(() => {
+                        const avail = (availabilityData.cruises as Record<string, Record<string, AvailabilityStatus>>)[cruise.slug] || {};
+                        const total = Object.keys(avail).length;
+                        const booked = Object.values(avail).filter(s => s === 'sold_out' || s === 'waitlist').length;
+                        return total > 0 && booked > total / 2 ? (
+                          <div className="absolute top-4 right-4">
+                            <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                              Limited Availability
+                            </span>
+                          </div>
+                        ) : null;
+                      })()}
                       <div className="absolute bottom-4 left-4 right-4">
                         <span className="inline-block bg-green-700/90 text-white text-xs font-bold px-3 py-1 rounded-full">
                           {cruise.duration.days} {t.days} / {cruise.duration.nights} {t.nights}
