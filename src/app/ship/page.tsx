@@ -96,8 +96,8 @@ export default function ShipPage() {
           >
             <div className="overflow-x-auto">
               <img
-                src="https://www.asukacruise.co.jp/asukacruise_wp/wp-content/themes/asuka/img/asuka3/img_boat.png"
-                alt="AsukaIII ship profile"
+                src="/images/deck-plan-en.jpg"
+                alt="AsukaIII deck plan"
                 className="w-full h-auto min-w-[600px]"
               />
             </div>
