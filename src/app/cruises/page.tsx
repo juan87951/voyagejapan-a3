@@ -90,13 +90,6 @@ export default function CruisesPage() {
                             style={{ backgroundImage: `url('${cruise.imageUrl}')` }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/20 to-transparent" />
-                          <div className="absolute top-4 right-4">
-                            {cruise.featured && (
-                              <span className="bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
-                                {t.filters.featured}
-                              </span>
-                            )}
-                          </div>
                           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
                             <span className="bg-green-400/90 text-white text-sm font-semibold px-3 py-1 rounded-full">
                               {cruise.duration.days} {t.days} / {cruise.duration.nights} {t.nights}
