@@ -23,6 +23,36 @@
     "paragraph2": "Every journey aboard AsukaIII is crafted to reveal Japan's hidden treasures—from remote islands to historic ports—while enveloping you in world-class comfort and service.",
     "learnMore": "Learn More About the Ship"
   },
+  "experienceLinks": {
+    "title": "Explore AsukaIII",
+    "subtitle": "Four pillars of an unforgettable voyage",
+    "cards": [
+      {
+        "label": "Art & Kogei",
+        "description": "Discover the floating museum and handcrafted Kogei art",
+        "href": "/art",
+        "image": "https://a3art.asukacruise.co.jp/images/artworks/kazumi-murose-1.jpg"
+      },
+      {
+        "label": "Accommodation",
+        "description": "12 categories from balcony rooms to penthouses",
+        "href": "/ship#cabins",
+        "image": "/images/cabins/asukasuite.jpg"
+      },
+      {
+        "label": "Dining",
+        "description": "6 restaurants from French fine dining to sushi",
+        "href": "/ship#dining",
+        "image": "https://www.asukacruise.co.jp/asukacruise_wp/wp-content/themes/asuka/img/asuka3/noblesse_1380_920.jpg"
+      },
+      {
+        "label": "Voyages",
+        "description": "Explore Japan's coastlines from Okinawa to Hokkaido",
+        "href": "/cruises",
+        "image": "https://asuka-web.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2025/07/23132252/7560414f559383b1024b2fd7b11ac15d.jpg"
+      }
+    ]
+  },
   "featuredCruises": {
     "title": "Featured Voyages",
     "subtitle": "Handpicked journeys for discerning travelers",

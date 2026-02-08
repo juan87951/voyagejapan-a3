@@ -106,7 +106,7 @@ export default function ShipPage() {
       </Section>
 
       {/* Cabins */}
-      <Section variant="cream">
+      <Section variant="cream" id="cabins">
         <Container>
           <SectionHeader>
             <SectionTitle className="text-navy">{t.cabins.title}</SectionTitle>
@@ -175,7 +175,7 @@ export default function ShipPage() {
       </Section>
 
       {/* Restaurants */}
-      <Section variant="navy">
+      <Section variant="navy" id="dining">
         <Container>
           <SectionHeader>
             <SectionTitle className="text-white">{t.dining.title}</SectionTitle>

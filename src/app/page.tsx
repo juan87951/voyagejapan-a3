@@ -1,6 +1,7 @@
 import {
   HeroSection,
   BrandStorySection,
+  ExperienceLinksSection,
   FeaturedCruisesSection,
   ShipHighlightsSection,
   CTASection,
@@ -11,6 +12,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <BrandStorySection />
+      <ExperienceLinksSection />
       <FeaturedCruisesSection />
       <ShipHighlightsSection />
       <CTASection />
