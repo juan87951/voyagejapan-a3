@@ -26,6 +26,7 @@ function AvailabilityBadge({ status }: { status: AvailabilityStatus }) {
 export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
   const t = content.cruiseDetail;
   const [activeTab, setActiveTab] = useState<string>('overview');
+  const [mapOpen, setMapOpen] = useState(false);
   const availabilityData = useAvailability();
 
   // Get availability for this cruise
@@ -214,13 +215,37 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
 
               {/* Route Map */}
               {cruise.routeMapUrl && (
-                <div className="mt-12 max-w-[250px] mx-auto">
-                  <img
-                    src={cruise.routeMapUrl}
-                    alt={`${cruise.title} route map`}
-                    className="w-full rounded-xl border border-gray-200"
-                  />
-                </div>
+                <>
+                  <div className="mt-12 max-w-[250px] mx-auto cursor-pointer" onClick={() => setMapOpen(true)}>
+                    <img
+                      src={cruise.routeMapUrl}
+                      alt={`${cruise.title} route map`}
+                      className="w-full rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+                    />
+                    <p className="text-center text-xs text-gray-400 mt-2">Click to enlarge</p>
+                  </div>
+
+                  {mapOpen && (
+                    <div
+                      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+                      onClick={() => setMapOpen(false)}
+                    >
+                      <div className="relative max-w-lg w-full mx-4" onClick={(e) => e.stopPropagation()}>
+                        <img
+                          src={cruise.routeMapUrl}
+                          alt={`${cruise.title} route map`}
+                          className="w-full rounded-xl bg-white p-4"
+                        />
+                        <button
+                          className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white text-gray-600 hover:text-gray-900 shadow-lg flex items-center justify-center text-lg"
+                          onClick={() => setMapOpen(false)}
+                        >
+                          &times;
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
             </motion.div>
           )}
