@@ -214,7 +214,7 @@ export function CruiseDetailClient({ cruise }: { cruise: Cruise }) {
 
               {/* Route Map */}
               {cruise.routeMapUrl && (
-                <div className="mt-12 max-w-2xl mx-auto">
+                <div className="mt-12 max-w-[250px] mx-auto">
                   <img
                     src={cruise.routeMapUrl}
                     alt={`${cruise.title} route map`}
