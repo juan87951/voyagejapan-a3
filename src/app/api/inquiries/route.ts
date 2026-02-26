@@ -29,6 +29,7 @@ async function sendNotification(body: Record<string, string | null>) {
         <tr><td style="padding:8px;border-bottom:1px solid #eee;color:#666;">Cruise</td><td style="padding:8px;border-bottom:1px solid #eee;">${cruiseInfo}</td></tr>
         ${cabinInfo ? `<tr><td style="padding:8px;border-bottom:1px solid #eee;color:#666;">Cabin</td><td style="padding:8px;border-bottom:1px solid #eee;">${cabinInfo}</td></tr>` : ''}
         ${guestInfo ? `<tr><td style="padding:8px;border-bottom:1px solid #eee;color:#666;">Guests</td><td style="padding:8px;border-bottom:1px solid #eee;">${guestInfo}</td></tr>` : ''}
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;color:#666;">T&C Agreed</td><td style="padding:8px;border-bottom:1px solid #eee;">${body.termsAgreement ? 'Yes' : 'No'}</td></tr>
       </table>
       ${body.message ? `<h3 style="margin-top:20px;">Message</h3><p style="background:#f9f9f9;padding:12px;border-radius:8px;">${body.message}</p>` : ''}
       <p style="color:#999;font-size:12px;margin-top:24px;">Sent from Voyage Japan inquiry form</p>
@@ -52,6 +53,8 @@ export async function POST(request: NextRequest) {
         cabin_class: body.cabinClass || null,
         guest_count: body.guestCount || null,
         message: body.message || null,
+        terms_agreed: body.termsAgreement || false,
+        terms_agreed_at: body.termsAgreement ? new Date().toISOString() : null,
       },
     ]);
 

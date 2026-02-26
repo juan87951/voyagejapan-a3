@@ -203,6 +203,8 @@
       "guestCount": "Number of Guests",
       "message": "Additional Message",
       "messagePlaceholder": "Tell us about your preferences, special requests, or any questions you may have...",
+      "termsAgreement": "I have read and agree to the",
+      "termsLink": "Terms & Conditions of Contract of Carriage",
       "consent": "I agree to receive marketing communications about cruises and special offers",
       "submit": "Submit Inquiry",
       "submitting": "Submitting...",
@@ -221,8 +223,34 @@
       "email": "Please enter a valid email address",
       "passport": "Please enter your passport number",
       "country": "Please select your country",
+      "termsAgreement": "You must agree to the Terms & Conditions to proceed",
       "submit": "Something went wrong. Please try again."
     }
+  },
+  "terms": {
+    "pageTitle": "Terms & Conditions",
+    "pageSubtitle": "Contract of Carriage for Passengers on Cruise Vessels",
+    "description": "Please review the Terms and Conditions of Contract of Carriage for Passengers on Cruise Vessels (Revised January 2026) issued by NYK Cruises Co., Ltd. These terms govern all voyages aboard AsukaIII.",
+    "downloadLabel": "Download Full Terms & Conditions (PDF)",
+    "lastUpdated": "Last updated: January 2026",
+    "sections": [
+      {
+        "title": "Chapter 1 — General Rules",
+        "summary": "Defines the scope of application, key terms such as Company, Passenger, Vessel, and Personal Belongings, and establishes that passengers are deemed to have acknowledged these terms."
+      },
+      {
+        "title": "Chapter 2 — Acceptance of Passage",
+        "summary": "Covers the commencement of the contract, conditions under which carriage may be refused, rules for personal belongings, and the Company's right to cancel or alter voyages."
+      },
+      {
+        "title": "Chapter 3 — Fare and Charges",
+        "summary": "Details fare collection, ticket validity, cancellation fees for domestic and overseas cruises, and refund policies."
+      },
+      {
+        "title": "Chapter 4 — Obligations and Liability",
+        "summary": "Outlines passenger obligations aboard the vessel, the Company's liability limitations, compensation scope, and provisions for force majeure events."
+      }
+    ]
   },
   "footer": {
     "tagline": "Experience the extraordinary aboard Japan's most prestigious cruise ship",
@@ -232,7 +260,7 @@
     "phone": "+81 3 1234 5678",
     "copyright": "Anchor Infinite, Inc. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms & Conditions"
   },
   "common": {
     "loading": "Loading...",

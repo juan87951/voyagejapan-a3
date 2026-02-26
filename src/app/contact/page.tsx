@@ -21,6 +21,7 @@ const contactSchema = z.object({
   cabinClass: z.string().optional(),
   guestCount: z.string().optional(),
   message: z.string().optional(),
+  termsAgreement: z.literal(true, { errorMap: () => ({ message: 'Required' }) }),
   consent: z.boolean().optional(),
 });
 
@@ -263,7 +264,28 @@ function ContactPageContent() {
                   {...register('message')}
                 />
 
-                {/* Consent */}
+                {/* Terms & Conditions Agreement */}
+                <div>
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      className="mt-1 w-4 h-4 rounded border-gray-300 text-gold focus:ring-gold"
+                      {...register('termsAgreement')}
+                    />
+                    <span className="text-sm text-gray-600">
+                      {t.form.termsAgreement}{' '}
+                      <Link href="/terms" target="_blank" className="text-gold underline hover:text-gold/80">
+                        {t.form.termsLink}
+                      </Link>
+                      <span className="text-red-500 ml-1">*</span>
+                    </span>
+                  </label>
+                  {errors.termsAgreement && (
+                    <p className="text-red-500 text-sm mt-1 ml-7">{t.errors.termsAgreement}</p>
+                  )}
+                </div>
+
+                {/* Marketing Consent */}
                 <label className="flex items-start gap-3 cursor-pointer">
                   <input
                     type="checkbox"
