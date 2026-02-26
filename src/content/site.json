@@ -194,7 +194,7 @@
       "country": "Country of Residence",
       "countryPlaceholder": "Select your country",
       "preferredCruise": "Preferred Cruise",
-      "preferredCruisePlaceholder": "Select a cruise (optional)",
+      "preferredCruisePlaceholder": "Select a cruise",
       "cabinClass": "Preferred Cabin Class",
       "cabinClassPlaceholder": "Select cabin class",
       "travelDates": "Preferred Travel Dates",
@@ -206,8 +206,8 @@
       "termsAgreement": "I have read and agree to the",
       "termsLink": "Terms & Conditions of Contract of Carriage",
       "consent": "I agree to receive marketing communications about cruises and special offers",
-      "submit": "Submit Inquiry",
-      "submitting": "Submitting...",
+      "submit": "Submit & Pay Deposit",
+      "submitting": "Processing...",
       "required": "Required",
       "penthouse": "Penthouse",
       "suite": "Suite",
@@ -223,8 +223,28 @@
       "email": "Please enter a valid email address",
       "passport": "Please enter your passport number",
       "country": "Please select your country",
+      "cruise": "Please select a cruise",
+      "cabinClass": "Please select a cabin class",
       "termsAgreement": "You must agree to the Terms & Conditions to proceed",
       "submit": "Something went wrong. Please try again."
+    }
+  },
+  "booking": {
+    "depositLabel": "Booking Deposit",
+    "depositAmount": "$500",
+    "depositPerPerson": "per person",
+    "depositDescription": "Your deposit secures your cabin reservation. Fully refundable if the voyage cannot be confirmed.",
+    "paymentCancelled": "Payment was not completed. You can try again below.",
+    "securedBy": "Secure payment powered by Stripe",
+    "confirmation": {
+      "title": "Deposit Received",
+      "message": "Your deposit has been received. Our team will confirm availability within 24-48 hours.",
+      "nextStepsTitle": "What happens next",
+      "step1": "We will confirm cabin availability within 24–48 hours",
+      "step2": "If confirmed, you will receive a final fare invoice",
+      "step3": "If unavailable, your deposit will be fully refunded",
+      "reference": "Booking Reference",
+      "cta": "Return to Home"
     }
   },
   "terms": {

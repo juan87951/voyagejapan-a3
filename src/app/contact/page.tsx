@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -17,8 +17,8 @@ const contactSchema = z.object({
   passport: z.string().min(1),
   phone: z.string().optional(),
   country: z.string().min(1),
-  preferredCruise: z.string().optional(),
-  cabinClass: z.string().optional(),
+  preferredCruise: z.string().min(1),
+  cabinClass: z.string().min(1),
   guestCount: z.string().optional(),
   message: z.string().optional(),
   termsAgreement: z.literal(true, { errorMap: () => ({ message: 'Required' }) }),
@@ -37,8 +37,10 @@ export default function ContactPage() {
 
 function ContactPageContent() {
   const t = content.contact;
+  const b = content.booking;
   const searchParams = useSearchParams();
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const router = useRouter();
+  const cancelled = searchParams.get('cancelled') === 'true';
 
   // Pre-fill from query params (from cabin row click)
   const prefilledCruise = searchParams.get('cruise') || '';
@@ -47,6 +49,8 @@ function ContactPageContent() {
   const prefilledCabinClass = prefilledCabin.toLowerCase().includes('penthouse') ? 'penthouse'
     : prefilledCabin.toLowerCase().includes('suite') ? 'suite'
     : prefilledCabin.toLowerCase().includes('balcony') ? 'balcony' : '';
+
+  const [guestCount, setGuestCount] = useState(1);
 
   const {
     register,
@@ -57,21 +61,23 @@ function ContactPageContent() {
     defaultValues: {
       preferredCruise: matchedCruise?.slug || '',
       cabinClass: prefilledCabinClass,
+      guestCount: '1',
       message: prefilledCabin ? `Interested in: ${prefilledCabin}` : '',
     },
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    const res = await fetch('/api/inquiries', {
+    const res = await fetch('/api/bookings', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
     if (!res.ok) {
-      alert('Something went wrong. Please try again.');
+      alert(t.errors.submit);
       return;
     }
-    setIsSubmitted(true);
+    const { checkoutUrl } = await res.json();
+    router.push(checkoutUrl);
   };
 
   const countries = [
@@ -115,49 +121,6 @@ function ContactPageContent() {
     { value: '5+', label: '5+' },
   ];
 
-  if (isSubmitted) {
-    return (
-      <>
-        <section className="bg-navy pt-32 pb-16">
-          <Container>
-            <div className="text-center">
-              <h1 className="font-display text-4xl md:text-5xl font-semibold text-white mb-4">
-                {t.pageTitle}
-              </h1>
-            </div>
-          </Container>
-        </section>
-        <section className="py-24">
-          <Container size="sm">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gold/20 flex items-center justify-center">
-                <svg className="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h2 className="font-display text-3xl font-semibold text-navy mb-4">
-                {t.success.title}
-              </h2>
-              <p className="text-gray-600 text-lg mb-8">
-                {t.success.message}
-              </p>
-              <Link href="/">
-                <Button variant="primary" className="rounded-full">
-                  {t.success.cta}
-                </Button>
-              </Link>
-            </motion.div>
-          </Container>
-        </section>
-      </>
-    );
-  }
-
   return (
     <>
       {/* Page Header */}
@@ -187,6 +150,13 @@ function ContactPageContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            {/* Payment cancelled banner */}
+            {cancelled && (
+              <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-800 text-sm">
+                {b.paymentCancelled}
+              </div>
+            )}
+
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
               <h2 className="font-display text-2xl font-semibold text-navy mb-8">
                 {t.form.title}
@@ -240,12 +210,14 @@ function ContactPageContent() {
                     label={t.form.preferredCruise}
                     placeholder={t.form.preferredCruisePlaceholder}
                     options={cruiseOptions}
+                    error={errors.preferredCruise ? t.errors.cruise : undefined}
                     {...register('preferredCruise')}
                   />
                   <Select
                     label={t.form.cabinClass}
                     placeholder={t.form.cabinClassPlaceholder}
                     options={cabinClasses}
+                    error={errors.cabinClass ? t.errors.cabinClass : undefined}
                     {...register('cabinClass')}
                   />
                 </div>
@@ -254,7 +226,9 @@ function ContactPageContent() {
                 <Select
                   label={t.form.guestCount}
                   options={guestOptions}
-                  {...register('guestCount')}
+                  {...register('guestCount', {
+                    onChange: (e) => setGuestCount(parseInt(e.target.value, 10) || 1),
+                  })}
                 />
 
                 {/* Message */}
@@ -297,6 +271,22 @@ function ContactPageContent() {
                   </span>
                 </label>
 
+                {/* Deposit Info Box */}
+                <div className="bg-navy/5 border border-navy/10 rounded-xl p-5">
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="font-display font-semibold text-navy text-lg">{b.depositLabel}</span>
+                    <span className="text-navy font-semibold">
+                      {b.depositAmount} {b.depositPerPerson}
+                      {guestCount > 1 && (
+                        <span className="text-gray-500 font-normal text-sm">
+                          {' '}({b.depositAmount} × {guestCount} = ${500 * guestCount})
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500">{b.depositDescription}</p>
+                </div>
+
                 {/* Submit */}
                 <Button
                   type="submit"
@@ -307,6 +297,11 @@ function ContactPageContent() {
                 >
                   {isSubmitting ? t.form.submitting : t.form.submit}
                 </Button>
+
+                {/* Stripe badge */}
+                <p className="text-center text-xs text-gray-400">
+                  {b.securedBy}
+                </p>
               </form>
             </div>
           </motion.div>
