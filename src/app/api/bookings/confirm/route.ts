@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getSupabase } from '@/lib/supabase';
+import { getSupabaseAdmin } from '@/lib/supabase';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Missing session_id' }, { status: 400 });
   }
 
-  const supabase = getSupabase();
+  const supabase = getSupabaseAdmin();
 
   const { data: booking, error } = await supabase
     .from('bookings')

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getStripe, DEPOSIT_AMOUNT_CENTS } from '@/lib/stripe';
-import { getSupabase } from '@/lib/supabase';
+import { getSupabaseAdmin } from '@/lib/supabase';
 import { cruises } from '@/data';
 
 export const dynamic = 'force-dynamic';
@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const supabase = getSupabase();
+    const supabase = getSupabaseAdmin();
 
     // Validate required fields
     if (!body.name || !body.email || !body.passport || !body.country || !body.preferredCruise || !body.cabinClass) {
